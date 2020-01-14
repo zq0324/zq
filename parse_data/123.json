@@ -1,0 +1,38 @@
+{
+  'dynamicKey': 'access_token',
+  'dynamicMethod': 'POST',
+  'dynamicURL': 'http://kt-api.yun-ti.com:80/api/v1/getToken',
+  'dynamicParams': [],
+  'dynamicHeaders': [
+    {
+      'headersKey': 'User-Agent',
+      'headersValue': 'Mozilla/5.0'
+    }
+  ],
+  'bodyType': 'raw',
+  'formWWWData': [
+    {
+      'formWWWKey': 'loop',
+      'formWWWValue': 'qwe',
+      'formWWWDescription': None
+    }
+  ],
+  'rawType': 'JSON(application/json)',
+  'rawContent': '{\n   "AppKey": "soKAM14J7hXQpEVbnBOdYzqUySR9kju5",\n   "AppSecret": "3Zd0O6ExyC9mhJUHg4WsDvGSNATBfkKV"\n}',
+  'resultData': [
+    {
+      'resultKey': 'token',
+      'resultType': 'Body',
+      'StartStr': '"accessToken":"',
+      'StopStr': '","expiresTime"',
+      'resultValue': None
+    },
+    {
+      'resultKey': 'expiresTime',
+      'resultType': 'Body',
+      'StartStr': '"expiresTime":',
+      'StopStr': '}}',
+      'resultValue': None
+    }
+  ]
+}

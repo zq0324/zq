@@ -1,0 +1,2757 @@
+{
+    'Name': '电梯',
+    'Devs': [
+        {
+            'Name': '局端001',
+            'Typ': 2,
+            'Raw': {
+                'Name': '局端001',
+                'Typ': 2,
+                'SigStaticPrm': {
+                    'Mac': 'D075BB8F9BCE',
+                    'Type': 1,
+                    'SoftWareVer1': [
+                        1,
+                        1
+                    ],
+                    'SoftWareVer2': 1,
+                    'HardwareVer': 1,
+                    'ByMadeTime': [
+                        1,
+                        1,
+                        1
+                    ],
+                    'ByMadeFactory': 1,
+                    'ByCustomID': 1,
+                    'ByManufacturer': 1,
+                    'ByDesignTime': [
+                        1,
+                        1,
+                        1
+                    ],
+                    'WAI1LowRange': 10,
+                    'WAI1HighRange': 100,
+                    'WAI2LowRange': 4000,
+                    'WAI2HighRange': 20000,
+                    'WAI3LowRange': 4000,
+                    'WAI3HighRange': 20000,
+                    'WAI4LowRange': 4000,
+                    'WAI4HighRange': 20000,
+                    'WAI1LowAlarm': -20,
+                    'WAI1HighAlarm': 80,
+                    'WAI2LowAlarm': 4000,
+                    'WAI2HighAlarm': 20000,
+                    'WAI3LowAlarm': 4000,
+                    'WAI3HighAlarm': 20000,
+                    'WAI4LowAlarm': 4000,
+                    'WAI4HighAlarm': 20000,
+                    'ByDI1': 0,
+                    'ByDI2': 0,
+                    'ByFlatLayerStopTimeThreshold': 16,
+                    'ByFloorChangeTimeThreshold': 240,
+                    'WPressureThreshold': 10000,
+                    'WMagneticThreshold': 20000,
+                    'BySelfLearnFlg': 0,
+                    'ByPhotoelectricTubeCurStat': 10,
+                    'ScHighestFloor': -56,
+                    'ScCurFloor': -1,
+                    'ScLowestFloor': -20,
+                    'ScCompenateValue': 10,
+                    'ByDirection': 1,
+                    'ByFlatLayerState': 1,
+                    'StCalicInfo': [
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        }
+                    ],
+                    'SwTemprature': -10,
+                    'DebugFlag': 0,
+                    'ByGd1Info': 1,
+                    'ByGd2Info': 10,
+                    'Rs485WBaudrate': 49664,
+                    'Rs485ByDataBit': 8,
+                    'Rs485ByStopBit': 1,
+                    'Rs485ByCheck': 0,
+                    'Rs485ByComType': 0,
+                    'Rs485ByCmd': [
+                        102,
+                        100,
+                        115,
+                        100,
+                        102,
+                        115,
+                        102,
+                        119,
+                        101,
+                        114,
+                        114,
+                        50,
+                        115,
+                        50,
+                        51,
+                        50,
+                        49,
+                        53,
+                        51,
+                        52,
+                        53,
+                        54,
+                        56,
+                        54,
+                        55,
+                        55,
+                        57,
+                        54,
+                        48,
+                        56,
+                        55,
+                        45,
+                        61,
+                        61,
+                        45,
+                        48,
+                        56,
+                        55,
+                        53,
+                        54,
+                        53,
+                        52,
+                        50,
+                        49,
+                        49,
+                        96,
+                        49,
+                        96,
+                        107,
+                        108,
+                        107,
+                        59,
+                        39,
+                        39,
+                        47,
+                        46,
+                        47,
+                        51,
+                        53,
+                        100,
+                        102,
+                        115,
+                        102,
+                        100
+                    ],
+                    'Rs485ByData': [
+                        49,
+                        50,
+                        51,
+                        51,
+                        68,
+                        87,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    'Rs232WBaudrate': 49664,
+                    'Rs232ByDataBit': 8,
+                    'Rs232ByStopBit': 1,
+                    'Rs232ByCheck': 0,
+                    'Rs232ByComType': 0,
+                    'Rs232ByCmd': [
+                        102,
+                        100,
+                        115,
+                        100,
+                        102,
+                        115,
+                        102,
+                        119,
+                        101,
+                        114,
+                        114,
+                        50,
+                        115,
+                        50,
+                        51,
+                        50,
+                        49,
+                        53,
+                        51,
+                        52,
+                        53,
+                        54,
+                        56,
+                        54,
+                        55,
+                        55,
+                        57,
+                        54,
+                        48,
+                        56,
+                        55,
+                        45,
+                        61,
+                        61,
+                        45,
+                        48,
+                        56,
+                        55,
+                        53,
+                        54,
+                        53,
+                        52,
+                        50,
+                        49,
+                        49,
+                        96,
+                        49,
+                        96,
+                        107,
+                        108,
+                        107,
+                        59,
+                        39,
+                        39,
+                        47,
+                        46,
+                        47,
+                        51,
+                        53,
+                        100,
+                        102,
+                        115,
+                        102,
+                        100
+                    ],
+                    'Rs232ByData': [
+                        100,
+                        101,
+                        71,
+                        90,
+                        91,
+                        71,
+                        51,
+                        10,
+                        100,
+                        70,
+                        80,
+                        60,
+                        50,
+                        40,
+                        70,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    'Time': 1509958957000,
+                    'Log': 'gfgf0000ggfdfgdgffd'
+                },
+                'SigAlmV1RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 64,
+                            'ByALarmFlg2': 16,
+                            'ByALarmFlg3': 8,
+                            'ByRes1': 3
+                        }
+                    ]
+                },
+                'SigAlmV2RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 32,
+                            'ByALarmType': 43,
+                            'ByRes1': 3
+                        }
+                    ]
+                },
+                'SigDalmV1RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Disalarms': [
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByALarmFlg3': 2,
+                            'ByALarmFlg4': 3
+                        }
+                    ]
+                },
+                'SigDalmV2RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Disalarms': [
+                        {
+                            'ByALarmFlg1': 8,
+                            'ByALarmFlg2': 1,
+                            'ByALarmType': 32,
+                            'ByALarmFlg4': 3
+                        }
+                    ]
+                },
+                'SigRtStatusRptPrm': {
+                    'CycleType': 0,
+                    'Cycle': 38528,
+                    'Status': [
+                        {
+                            'ByDI1Value': 1,
+                            'ByDI2Value': 1,
+                            'ByDI3': 2,
+                            'ByDI4': 3,
+                            'ByDI5': 4,
+                            'ByDI6': 5,
+                            'STemperature': 616,
+                            'WAI1Value': 7,
+                            'WAI2Value': 8,
+                            'WAI3Value': 9,
+                            'WAI4Value': 10,
+                            'WAISWValue': 11,
+                            'WSpeed': 1200,
+                            'WPress': 63000,
+                            'ByRes1': 14,
+                            'ByRes2': 15,
+                            'WRes1': 16,
+                            'WRes2': 17,
+                            'WRes3': 18,
+                            'WRes4': 19
+                        }
+                    ]
+                },
+                'SigRtLevelRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ScHighestFloor': 100,
+                            'ScCurFloor': -1,
+                            'ScLowestFloor': -2,
+                            'ByDirection': 3,
+                            'ByFlatLayerState': 4
+                        }
+                    ]
+                },
+                'ElevInfoRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByElvatorUpStat': 1,
+                            'ByElvatorDownStat': 1,
+                            'ByRuningStat': 2,
+                            'ByDoorLockStat': 3,
+                            'ByRepairStat': 4,
+                            'ByDriverStat': 5,
+                            'ByElvatorLockStat': 6,
+                            'ByVipRunStat': 7,
+                            'ByGroupControlStat': 8,
+                            'ByFireRunStat': 9,
+                            'ByFullLoadRunStat': 10,
+                            'ByOverLoadStat': 11,
+                            'ByOpenDoorStat': 12,
+                            'ByCloseDoorStat': 13,
+                            'BySafetyLoopStat': 14,
+                            'ByElvatorStat': 15,
+                            'ByDoorOpenButtonStat': 16,
+                            'ByDoorZoneStat': 17,
+                            'ByWellPathLearningStat': 18,
+                            'BytestRunStat': 19,
+                            'ByElvatorForwordFloors': 20,
+                            'ByElvatorCurrentFloor': 21,
+                            'ByElvatorErrorCodeH': 22,
+                            'ByElvatorErrorCodeL': 23,
+                            'ByElvatorErrorFloor': 24,
+                            'ByElvatorErrorYear': 24,
+                            'ByElvatorErrorMonth': 1,
+                            'ByElvatorErrorDay': 1,
+                            'ByElvatorErrorHour': 17,
+                            'ByElvatorErrorMin': 10,
+                            'ByElvatorErrorSecond': 86,
+                            'DwElvatorRunFrequency': 31,
+                            'DwElvatorRunTime': 32000
+                        }
+                    ]
+                },
+                'ElevCallRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ScLowestFloor': -2,
+                            'ScHighestFloor': 1,
+                            'ByElevatorUpCall': [
+                                1,
+                                2,
+                                4,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            'ByElevatorDownCall': [
+                                1,
+                                2,
+                                4,
+                                8,
+                                16,
+                                32,
+                                4,
+                                1
+                            ],
+                            'ByElevatorInnerCall': [
+                                1,
+                                128,
+                                0,
+                                0,
+                                64,
+                                32,
+                                8,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                'ElevTrapAlarmRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByTrappedFlg': 10
+                        },
+                        {
+                            'ByTrappedFlg': 1
+                        },
+                        {
+                            'ByTrappedFlg': 1
+                        }
+                    ]
+                },
+                'ElevFailureRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByElevatorErrorFlg': 1,
+                            'ByElevatorRepairFlg': 1,
+                            'ByElvatorErrorCodeH': 2,
+                            'ByElvatorErrorCodeL': 3,
+                            'ScErrorFloor': -4
+                        }
+                    ]
+                },
+                'ElevLedFlrRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByLedLoopBackInfo': [
+                                1,
+                                2,
+                                4,
+                                8,
+                                16,
+                                32,
+                                64,
+                                128,
+                                1,
+                                1,
+                                1,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                },
+                'SigRtStRptCycSetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigResetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigAI1AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI2RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI2AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI3RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI3AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI4RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI4AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDI1LgcSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDI2LgcSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlTmThrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlLearnSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlFlrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRestoreRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs485CtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs232CtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs485SetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs232SetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigPartSwitchRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigFlrPrmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlPreMagThrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDbSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigFlrCalcCompSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibFlrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibTempSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibClrRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigElevCtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrStaticPrm': {
+                    'Mac': 'F0EEA96E8CA7',
+                    'Type': 2,
+                    'SoftWareVer1': [
+                        1,
+                        1
+                    ],
+                    'SoftWareVer2': 20,
+                    'HardwareVer': 10,
+                    'ByMadeTime': [
+                        17,
+                        17,
+                        17
+                    ],
+                    'ByMadeFactory': 20,
+                    'ByCustomID': 30,
+                    'ByManufacturer': 110,
+                    'ByDesignTime': [
+                        17,
+                        17,
+                        17
+                    ],
+                    'ResetHour': 0,
+                    'ResetMinute': 1,
+                    'Cmd': '',
+                    'ByAlarmConfig1': 0,
+                    'ByAlarmConfig2': 0
+                },
+                'PwrAlarmV1RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 64,
+                            'ByALarmFlg2': 64,
+                            'ByRes1': 2,
+                            'ByRes2': 3
+                        }
+                    ]
+                },
+                'PwrAlarmV2RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 128,
+                            'ByALarmFlg2': 16,
+                            'ByRes1': 2,
+                            'ByAlarmType': 141
+                        }
+                    ]
+                },
+                'PwrDalmV1RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 128,
+                            'ByALarmFlg2': 16,
+                            'ByRes1': 0,
+                            'ByRes2': 3
+                        }
+                    ]
+                },
+                'PwrDalmV2RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 2,
+                            'ByALarmFlg2': 2,
+                            'ByRes1': 2,
+                            'ByAlarmType': 138
+                        }
+                    ]
+                },
+                'PwrRtStatusRptParam': {
+                    'CycleType': 0,
+                    'Cycle': 1000,
+                    'Alarms': [
+                        {
+                            'ByBatteryVoltage': 10,
+                            'ByAdapterChargingCur': 1,
+                            'WDCChannelState': 2,
+                            'WVotagle': 3,
+                            'WCurrent': 4,
+                            'ByAcStatus': 5,
+                            'ByProtetStatus': 6,
+                            'ByRes1': 7,
+                            'ByRes2': 8,
+                            'WRes1': 9
+                        }
+                    ]
+                },
+                'PwrRestoreRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrRtStRptCycSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrDc2DcCtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrResetTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrAlmSetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigUpgradeRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigUpgradeDataPshRspPrm': {
+                    'ByErrType': 0
+                }
+            }
+        },
+        {
+            'Name': '终端001',
+            'Typ': 3,
+            'Raw': {
+                'Name': '终端001',
+                'Typ': 3,
+                'SigStaticPrm': {
+                    'Mac': '01EE23DC6CCC',
+                    'Type': 1,
+                    'SoftWareVer1': [
+                        10,
+                        1
+                    ],
+                    'SoftWareVer2': 1,
+                    'HardwareVer': 1,
+                    'ByMadeTime': [
+                        1,
+                        1,
+                        1
+                    ],
+                    'ByMadeFactory': 1,
+                    'ByCustomID': 1,
+                    'ByManufacturer': 1,
+                    'ByDesignTime': [
+                        1,
+                        1,
+                        1
+                    ],
+                    'WAI1LowRange': 1,
+                    'WAI1HighRange': 20,
+                    'WAI2LowRange': 5000,
+                    'WAI2HighRange': 20000,
+                    'WAI3LowRange': 5000,
+                    'WAI3HighRange': 20000,
+                    'WAI4LowRange': 5000,
+                    'WAI4HighRange': 20000,
+                    'WAI1LowAlarm': -19,
+                    'WAI1HighAlarm': 81,
+                    'WAI2LowAlarm': 5000,
+                    'WAI2HighAlarm': 20000,
+                    'WAI3LowAlarm': 5000,
+                    'WAI3HighAlarm': 20000,
+                    'WAI4LowAlarm': 5000,
+                    'WAI4HighAlarm': 20000,
+                    'ByDI1': 1,
+                    'ByDI2': 1,
+                    'ByFlatLayerStopTimeThreshold': 64,
+                    'ByFloorChangeTimeThreshold': 208,
+                    'WPressureThreshold': 10001,
+                    'WMagneticThreshold': 20001,
+                    'BySelfLearnFlg': 1,
+                    'ByPhotoelectricTubeCurStat': 0,
+                    'ScHighestFloor': 100,
+                    'ScCurFloor': 0,
+                    'ScLowestFloor': -8,
+                    'ScCompenateValue': -2,
+                    'ByDirection': 1,
+                    'ByFlatLayerState': 1,
+                    'StCalicInfo': [
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        },
+                        {
+                            'ScFloor': 0,
+                            'ByValidFlg': 0,
+                            'WFloorDec': 0
+                        }
+                    ],
+                    'SwTemprature': 100,
+                    'DebugFlag': 0,
+                    'ByGd1Info': 10,
+                    'ByGd2Info': 10,
+                    'Rs485WBaudrate': 49664,
+                    'Rs485ByDataBit': 8,
+                    'Rs485ByStopBit': 1,
+                    'Rs485ByCheck': 0,
+                    'Rs485ByComType': 0,
+                    'Rs485ByCmd': [
+                        102,
+                        100,
+                        115,
+                        100,
+                        102,
+                        115,
+                        102,
+                        119,
+                        101,
+                        114,
+                        114,
+                        50,
+                        115,
+                        50,
+                        51,
+                        50,
+                        49,
+                        53,
+                        51,
+                        52,
+                        53,
+                        54,
+                        56,
+                        54,
+                        55,
+                        55,
+                        57,
+                        54,
+                        48,
+                        56,
+                        55,
+                        45,
+                        61,
+                        61,
+                        45,
+                        48,
+                        56,
+                        55,
+                        53,
+                        54,
+                        53,
+                        52,
+                        50,
+                        49,
+                        49,
+                        96,
+                        49,
+                        96,
+                        107,
+                        108,
+                        107,
+                        59,
+                        39,
+                        39,
+                        47,
+                        46,
+                        111,
+                        51,
+                        53,
+                        100,
+                        102,
+                        115,
+                        102,
+                        100
+                    ],
+                    'Rs485ByData': [
+                        1,
+                        10,
+                        20,
+                        30,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    'Rs232WBaudrate': 49664,
+                    'Rs232ByDataBit': 8,
+                    'Rs232ByStopBit': 1,
+                    'Rs232ByCheck': 0,
+                    'Rs232ByComType': 0,
+                    'Rs232ByCmd': [
+                        102,
+                        100,
+                        115,
+                        100,
+                        102,
+                        115,
+                        102,
+                        119,
+                        101,
+                        114,
+                        114,
+                        50,
+                        115,
+                        50,
+                        51,
+                        50,
+                        49,
+                        53,
+                        51,
+                        52,
+                        53,
+                        54,
+                        56,
+                        54,
+                        55,
+                        55,
+                        57,
+                        54,
+                        48,
+                        56,
+                        55,
+                        45,
+                        61,
+                        61,
+                        45,
+                        48,
+                        56,
+                        55,
+                        53,
+                        54,
+                        53,
+                        52,
+                        50,
+                        49,
+                        49,
+                        96,
+                        49,
+                        96,
+                        107,
+                        108,
+                        107,
+                        59,
+                        39,
+                        39,
+                        47,
+                        46,
+                        111,
+                        51,
+                        53,
+                        100,
+                        102,
+                        115,
+                        102,
+                        100
+                    ],
+                    'Rs232ByData': [
+                        1,
+                        2,
+                        40,
+                        10,
+                        10,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    'Time': 0,
+                    'Log': 'bcvvbbvcbvcvbcvcbbvvbvbcbbbvcbcvbcvbbbbbbb'
+                },
+                'SigAlmV1RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 8,
+                            'ByALarmFlg2': 2,
+                            'ByALarmFlg3': 2,
+                            'ByRes1': 3
+                        }
+                    ]
+                },
+                'SigAlmV2RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByALarmType': 2,
+                            'ByRes1': 3
+                        }
+                    ]
+                },
+                'SigDalmV1RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Disalarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 1,
+                            'ByALarmFlg3': 2,
+                            'ByALarmFlg4': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 3,
+                            'ByALarmFlg3': 2,
+                            'ByALarmFlg4': 1
+                        },
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByALarmFlg3': 1,
+                            'ByALarmFlg4': 1
+                        }
+                    ]
+                },
+                'SigDalmV2RptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Disalarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 1,
+                            'ByALarmType': 2,
+                            'ByALarmFlg4': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 3,
+                            'ByALarmType': 2,
+                            'ByALarmFlg4': 1
+                        },
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByALarmType': 1,
+                            'ByALarmFlg4': 1
+                        }
+                    ]
+                },
+                'SigRtStatusRptPrm': {
+                    'CycleType': 0,
+                    'Cycle': 10000,
+                    'Status': [
+                        {
+                            'ByDI1Value': 1,
+                            'ByDI2Value': 1,
+                            'ByDI3': 1,
+                            'ByDI4': 2,
+                            'ByDI5': 4,
+                            'ByDI6': 5,
+                            'STemperature': 6,
+                            'WAI1Value': 7,
+                            'WAI2Value': 8,
+                            'WAI3Value': 9,
+                            'WAI4Value': 10,
+                            'WAISWValue': 11,
+                            'WSpeed': 12,
+                            'WPress': 13,
+                            'ByRes1': 14,
+                            'ByRes2': 15,
+                            'WRes1': 16,
+                            'WRes2': 17,
+                            'WRes3': 18,
+                            'WRes4': 19
+                        }
+                    ]
+                },
+                'SigRtLevelRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ScHighestFloor': 1,
+                            'ScCurFloor': 1,
+                            'ScLowestFloor': -2,
+                            'ByDirection': 3,
+                            'ByFlatLayerState': 4
+                        }
+                    ]
+                },
+                'ElevInfoRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByElvatorUpStat': 1,
+                            'ByElvatorDownStat': 1,
+                            'ByRuningStat': 2,
+                            'ByDoorLockStat': 3,
+                            'ByRepairStat': 4,
+                            'ByDriverStat': 5,
+                            'ByElvatorLockStat': 6,
+                            'ByVipRunStat': 7,
+                            'ByGroupControlStat': 8,
+                            'ByFireRunStat': 9,
+                            'ByFullLoadRunStat': 10,
+                            'ByOverLoadStat': 11,
+                            'ByOpenDoorStat': 12,
+                            'ByCloseDoorStat': 13,
+                            'BySafetyLoopStat': 14,
+                            'ByElvatorStat': 15,
+                            'ByDoorOpenButtonStat': 16,
+                            'ByDoorZoneStat': 17,
+                            'ByWellPathLearningStat': 18,
+                            'BytestRunStat': 19,
+                            'ByElvatorForwordFloors': 20,
+                            'ByElvatorCurrentFloor': 21,
+                            'ByElvatorErrorCodeH': 22,
+                            'ByElvatorErrorCodeL': 23,
+                            'ByElvatorErrorFloor': 24,
+                            'ByElvatorErrorYear': 24,
+                            'ByElvatorErrorMonth': 18,
+                            'ByElvatorErrorDay': 34,
+                            'ByElvatorErrorHour': 18,
+                            'ByElvatorErrorMin': 35,
+                            'ByElvatorErrorSecond': 32,
+                            'DwElvatorRunFrequency': 31,
+                            'DwElvatorRunTime': 32
+                        }
+                    ]
+                },
+                'ElevCallRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ScLowestFloor': 0,
+                            'ScHighestFloor': 1,
+                            'ByElevatorUpCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorDownCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorInnerCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            'ScLowestFloor': 5,
+                            'ScHighestFloor': 4,
+                            'ByElevatorUpCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorDownCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorInnerCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            'ScLowestFloor': 1,
+                            'ScHighestFloor': 1,
+                            'ByElevatorUpCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorDownCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            'ByElevatorInnerCall': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                },
+                'ElevTrapAlarmRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByTrappedFlg': 1
+                        },
+                        {
+                            'ByTrappedFlg': 1
+                        },
+                        {
+                            'ByTrappedFlg': 1
+                        }
+                    ]
+                },
+                'ElevFailureRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByElevatorErrorFlg': 0,
+                            'ByElevatorRepairFlg': 1,
+                            'ByElvatorErrorCodeH': 2,
+                            'ByElvatorErrorCodeL': 3,
+                            'ScErrorFloor': 4
+                        },
+                        {
+                            'ByElevatorErrorFlg': 5,
+                            'ByElevatorRepairFlg': 4,
+                            'ByElvatorErrorCodeH': 3,
+                            'ByElvatorErrorCodeL': 2,
+                            'ScErrorFloor': 1
+                        },
+                        {
+                            'ByElevatorErrorFlg': 1,
+                            'ByElevatorRepairFlg': 1,
+                            'ByElvatorErrorCodeH': 1,
+                            'ByElvatorErrorCodeL': 1,
+                            'ScErrorFloor': 1
+                        }
+                    ]
+                },
+                'ElevLedFlrRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Infos': [
+                        {
+                            'ByLedLoopBackInfo': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            'ByLedLoopBackInfo': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            'ByLedLoopBackInfo': [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                },
+                'SigRtStRptCycSetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigResetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigAI1AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI2RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI2AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI3RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI3AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI4RngSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigAI4AlmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDI1LgcSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDI2LgcSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlTmThrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlLearnSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlFlrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRestoreRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs485CtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs232CtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs485SetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigRs232SetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigPartSwitchRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigFlrPrmSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigLvlPreMagThrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigDbSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigFlrCalcCompSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibFlrSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibTempSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigCalibClrRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigElevCtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrStaticPrm': {
+                    'Mac': 'B13A4FB3D497',
+                    'Type': 3,
+                    'SoftWareVer1': [
+                        10,
+                        9
+                    ],
+                    'SoftWareVer2': 20,
+                    'HardwareVer': 10,
+                    'ByMadeTime': [
+                        2,
+                        2,
+                        1
+                    ],
+                    'ByMadeFactory': 10,
+                    'ByCustomID': 11,
+                    'ByManufacturer': 10,
+                    'ByDesignTime': [
+                        1,
+                        1,
+                        1
+                    ],
+                    'ResetHour': 37,
+                    'ResetMinute': 128,
+                    'Cmd': '',
+                    'ByAlarmConfig1': 0,
+                    'ByAlarmConfig2': 0
+                },
+                'PwrAlarmV1RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 2,
+                            'ByRes2': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 8,
+                            'ByRes1': 2,
+                            'ByRes2': 1
+                        },
+                        {
+                            'ByALarmFlg1': 16,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 1,
+                            'ByRes2': 1
+                        }
+                    ]
+                },
+                'PwrAlarmV2RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 2,
+                            'ByAlarmType': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 3,
+                            'ByRes1': 2,
+                            'ByAlarmType': 1
+                        },
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 1,
+                            'ByAlarmType': 1
+                        }
+                    ]
+                },
+                'PwrDalmV1RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 2,
+                            'ByRes2': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 3,
+                            'ByRes1': 2,
+                            'ByRes2': 1
+                        },
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 1,
+                            'ByRes2': 1
+                        }
+                    ]
+                },
+                'PwrDalmV2RptParam': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Alarms': [
+                        {
+                            'ByALarmFlg1': 0,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 2,
+                            'ByAlarmType': 3
+                        },
+                        {
+                            'ByALarmFlg1': 4,
+                            'ByALarmFlg2': 3,
+                            'ByRes1': 2,
+                            'ByAlarmType': 1
+                        },
+                        {
+                            'ByALarmFlg1': 1,
+                            'ByALarmFlg2': 1,
+                            'ByRes1': 1,
+                            'ByAlarmType': 1
+                        }
+                    ]
+                },
+                'PwrRtStatusRptParam': {
+                    'CycleType': 0,
+                    'Cycle': 1000000,
+                    'Alarms': [
+                        {
+                            'ByBatteryVoltage': 1,
+                            'ByAdapterChargingCur': 1,
+                            'WDCChannelState': 2,
+                            'WVotagle': 3,
+                            'WCurrent': 4,
+                            'ByAcStatus': 5,
+                            'ByProtetStatus': 6,
+                            'ByRes1': 7,
+                            'ByRes2': 8,
+                            'WRes1': 9
+                        }
+                    ]
+                },
+                'PwrRestoreRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrRtStRptCycSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrDc2DcCtrlRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrResetTimeSetRspPrm': {
+                    'ByErrType': 0
+                },
+                'PwrAlmSetRspPrm': {
+                    'ErrType': 0
+                },
+                'SigUpgradeRspPrm': {
+                    'ByErrType': 0
+                },
+                'SigUpgradeDataPshRspPrm': {
+                    'ByErrType': 0
+                }
+            }
+        },
+        {
+            'Name': '网关001',
+            'Typ': 4,
+            'Raw': {
+                'Name': '网关001',
+                'Typ': 4,
+                'RtStatus': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Status': [
+                        {
+                            'device': {
+                                'mac': 'aqeez2x4',
+                                'ipaddress': 'aqeez2x4',
+                                'swmainversion': 'aqeez2x4',
+                                'swsubversion': 'aqeez2x4',
+                                'memfree': 'aqeez2x4',
+                                'loadLevel': 'aqeez2x4',
+                                'uptime': '1sgl22fj',
+                                'appCode': '03wtky4a'
+                            },
+                            'plc': {
+                                'local': {
+                                    'mac': 'y61q6xwt',
+                                    'quality': 'y61q6xwt',
+                                    'rx': 'y61q6xwt',
+                                    'tx': 'y61q6xwt'
+                                },
+                                'remote': {
+                                    'mac': 'y61q6xwt',
+                                    'quality': 'y61q6xwt',
+                                    'rx': 'y61q6xwt',
+                                    'tx': 'y61q6xwt'
+                                }
+                            },
+                            'client': [
+                                {
+                                    'name': 'ovikmllt',
+                                    'mac': 'ovikmllt',
+                                    'type': 'ovikmllt',
+                                    'ip': 'ovikmllt',
+                                    'send': 'ovikmllt',
+                                    'receive': 'ovikmllt',
+                                    'up': 'ovikmllt',
+                                    'down': 'ovikmllt'
+                                }
+                            ]
+                        },
+                        {
+                            'device': {
+                                'mac': 'ovikmllt',
+                                'ipaddress': 'ovikmllt',
+                                'swmainversion': 'ovikmllt',
+                                'swsubversion': 'ovikmllt',
+                                'memfree': 'y61q6xwt',
+                                'loadLevel': 'y61q6xwt',
+                                'uptime': 'y61q6xwt',
+                                'appCode': 'y61q6xwt'
+                            },
+                            'plc': {
+                                'local': {
+
+                                },
+                                'remote': {
+
+                                }
+                            },
+                            'client': [
+                                {
+                                    'name': 'y61q6xwt',
+                                    'mac': 'y61q6xwt',
+                                    'type': 'fuu0j5k8',
+                                    'ip': 'fuu0j5k8',
+                                    'send': 'fuu0j5k8',
+                                    'receive': 'fuu0j5k8',
+                                    'up': 'fuu0j5k8',
+                                    'down': 'fuu0j5k8'
+                                }
+                            ]
+                        },
+                        {
+
+                        },
+                        {
+
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            'Name': '屏001',
+            'Typ': 1,
+            'Raw': {
+                'Name': '屏001',
+                'Typ': 1,
+                'ScrnStaticPrm': {
+                    'ElevatorId': '707901022430772352589',
+                    'ScreenMac': '8A77BEC56961',
+                    'WifiName': '',
+                    'WifiPass': ''
+                },
+                'HeartbeatPrm': {
+                    'CycleType': -1,
+                    'Cycle': 120000
+                },
+                'ScrnGwMacRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'GatewayMac': '95B536EB2D73'
+                },
+                'ElevRtStatusRptPrm': {
+                    'CycleType': 0,
+                    'Cycle': 1000,
+                    'Status': [
+                        {
+                            'Speed': 1110,
+                            'Quake': 1,
+                            'Temperature': 12,
+                            'Weight': 3,
+                            'PersonNum': 4,
+                            'IsSleepy': 5,
+                            'XSwing': 6,
+                            'YSwing': 7,
+                            'ZSwing': 8,
+                            'ShakeFrequency': 9,
+                            'Touch': 10,
+                            'Photosensitive': 11,
+                            'EmergencyLighting': 12,
+                            'WifiAp': 1,
+                            'XAcceleration': 14,
+                            'YAcceleration': 15,
+                            'ZAcceleration': 16
+                        }
+                    ]
+                },
+                'ElevMvStatusRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Status': [
+                        {
+                            'CurrentLevel': -1,
+                            'MoveDirection': 2,
+                            'FlatStatus': 2,
+                            'HighestFloor': 100,
+                            'LowestFloor': -4,
+                            'DoorStatus': 15,
+                            'CameraSn': '123r21121',
+                            'YuntiType': 7,
+                            'CameraType': 8,
+                            'ChangeState': 9
+                        }
+                    ]
+                },
+                'DevUgdDlProcRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'SigMac': 'D075BB8F9BCE'
+                },
+                'ScrnUsrMacRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Macs': [
+                        '456CCA5B2EB2',
+                        '456CCA5B2EB6',
+                        '456CCA5B2EB7'
+                    ]
+                },
+                'ScrnVerRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Version': '3.5.1'
+                },
+                'CamTypeRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Type': 3
+                },
+                'CamInfoRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'CameraSn': '12345678q',
+                    'Dev_name': '12345678q_0123456789',
+                    'ByRes1': 1
+                },
+                'EstRtStatusRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Status': [
+                        {
+                            'DcATotalEnterNum': 1,
+                            'DcALeftNum': 1,
+                            'DcAPassNum': 2,
+                            'DcBEnterNum': 3,
+                            'DcBLeftNum': 4,
+                            'DcBPassNum': 5,
+                            'MoveDirection': 6,
+                            'RunState': 7,
+                            'DirectionUniform': 8,
+                            'RetrogradeCheck': 9,
+                            'TotalRetrograde': 10,
+                            'ChildCheck': 11,
+                            'EntranceCongestion': 12,
+                            'ExportCongestion': 13,
+                            'DesityCheck': 14,
+                            'RunVoltage': 15,
+                            'RunCurrent': 16
+                        }
+                    ]
+                },
+                'EstCamInfoRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'RcCount': 1,
+                    'DcCount': 2
+                },
+                'ScrnPlcVdoRltRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'WarnCode': 123411,
+                    'ByErrType': 1
+                },
+                'ScrnGRtStatusRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'ElevRtStatus': [
+                        {
+                            'Speed': 0,
+                            'Quake': 1,
+                            'Temperature': 2,
+                            'Weight': 3,
+                            'PersonNum': 4,
+                            'IsSleepy': 5,
+                            'XSwing': 6,
+                            'YSwing': 7,
+                            'ZSwing': 8,
+                            'ShakeFrequency': 9,
+                            'Touch': 10,
+                            'Photosensitive': 11,
+                            'EmergencyLighting': 12,
+                            'WifiAp': 13,
+                            'XAcceleration': 14,
+                            'YAcceleration': 15,
+                            'ZAcceleration': 16
+                        }
+                    ],
+                    'LSigRtStatus': [
+                        {
+                            'ByDI1Value': 0,
+                            'ByDI2Value': 1,
+                            'ByDI3': 2,
+                            'ByDI4': 3,
+                            'ByDI5': 4,
+                            'ByDI6': 5,
+                            'STemperature': 6,
+                            'WAI1Value': 7,
+                            'WAI2Value': 8,
+                            'WAI3Value': 9,
+                            'WAI4Value': 10,
+                            'WAISWValue': 11,
+                            'WSpeed': 12,
+                            'WPress': 13,
+                            'ByRes1': 14,
+                            'ByRes2': 15,
+                            'WRes1': 16,
+                            'WRes2': 17,
+                            'WRes3': 18,
+                            'WRes4': 19
+                        }
+                    ],
+                    'TSigRtStatus': [
+                        {
+                            'ByDI1Value': 0,
+                            'ByDI2Value': 1,
+                            'ByDI3': 2,
+                            'ByDI4': 3,
+                            'ByDI5': 4,
+                            'ByDI6': 5,
+                            'STemperature': 6,
+                            'WAI1Value': 7,
+                            'WAI2Value': 8,
+                            'WAI3Value': 9,
+                            'WAI4Value': 10,
+                            'WAISWValue': 11,
+                            'WSpeed': 12,
+                            'WPress': 13,
+                            'ByRes1': 14,
+                            'ByRes2': 15,
+                            'WRes1': 16,
+                            'WRes2': 17,
+                            'WRes3': 18,
+                            'WRes4': 19
+                        }
+                    ],
+                    'LPwrRtStatus': [
+                        {
+                            'ByBatteryVoltage': 0,
+                            'ByAdapterChargingCur': 1,
+                            'WDCChannelState': 2,
+                            'WVotagle': 3,
+                            'WCurrent': 4,
+                            'ByAcStatus': 5,
+                            'ByProtetStatus': 6,
+                            'ByRes1': 7,
+                            'ByRes2': 8,
+                            'WRes1': 9
+                        }
+                    ],
+                    'TPwrRtStatus': [
+                        {
+                            'ByBatteryVoltage': 0,
+                            'ByAdapterChargingCur': 1,
+                            'WDCChannelState': 2,
+                            'WVotagle': 3,
+                            'WCurrent': 4,
+                            'ByAcStatus': 5,
+                            'ByProtetStatus': 6,
+                            'ByRes1': 7,
+                            'ByRes2': 8,
+                            'WRes1': 9
+                        }
+                    ]
+                },
+                'ScrnPbDlRltRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'PlaybillCode': 'hl3tjqyb2x0001',
+                    'CuciInfo': [
+                        {
+                            'Mcode': '0121001011111010',
+                            'IsSuccess': 1
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        },
+                        {
+                            'Mcode': '',
+                            'IsSuccess': 0
+                        }
+                    ],
+                    'ByErrType': 1,
+                    'Result': 11
+                },
+                'ScrnUpRltRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'ByErrType': 1,
+                    'ByAppVer': '3.5.5',
+                    'Result': 1
+                },
+                'ScrnElevTypeRptPrm': {
+                    'CycleType': -1,
+                    'Cycle': 10000,
+                    'Type': 1
+                },
+                'ScrnPbUpRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnWifiSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnLogoSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnAlmSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnPlVSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnSpkSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnBdSetRspPrm': {
+                    'ErrType': 0
+                },
+                'ScrnEstAlrSetRspPrm': {
+                    'ErrType': 0
+                }
+            }
+        }
+    ]
+}

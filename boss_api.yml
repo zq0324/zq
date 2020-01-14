@@ -1,0 +1,339 @@
+
+app.getAccountBalance:
+  summary: getAccountBalance
+  method: get
+  path: /boss/app/account/v2/getAccountBalance
+
+app.getBrokerageAndActivityInfo:
+  summary: 所有佣金以及佣金活动信息
+  method: get
+  path: /boss/app/accounthistory/v2/getBrokerageAndActivityInfo
+
+app.getBrokerageHistory:
+  summary: 获取当前用户的佣金记录历史
+  method: get
+  path: /boss/app/accounthistory/v2/getBrokerageHistory
+  params: 
+    pageIndex: # integer  # optional pageIndex  
+    pageSize: # integer  # optional pageSize  
+
+app.getSimpleBrokerageInfo:
+  summary: 获取佣金的简要信息
+  method: get
+  path: /boss/app/accounthistory/v2/getSimpleBrokerageInfo
+  params: 
+    timeType: # integer  # optional 时间类型，1：昨天，2：本月，3：上月  
+
+app.queryAccountHistory:
+  summary: queryAccountHistory
+  method: get
+  path: /boss/app/accounthistory/v2/queryAccountHistory
+  params: 
+    optType: # integer  # optional 需要查询的账单类型，1：充值 2：消费  
+
+app.getActivityDetailList:
+  summary: 活动详情(根据用途查询)
+  method: get
+  path: /boss/app/activity/v2/getActivityDetailList
+  params: 
+    clienteleGuid: # integer  # optional 客户id  
+    type: # string  # optional 用途 1首页 2个人中心  
+
+app.getActivityRewardList:
+  summary: 活动奖励列表
+  method: post
+  path: /boss/app/activity/v2/getActivityRewardList
+  json: 
+    clienteleGuid: # integer  # 客户ID  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+    state: # string  # 状态0未达成 1已达成  
+
+app.getCouponList:
+  summary: 查询优惠券信息
+  method: post
+  path: /boss/app/coupon/v2/getCouponList
+  json: 
+    amount: # number  # 优惠金额  
+    couponName: # string  # 优惠券名称  
+    endTime: # string  # 优惠券失效时间  
+    limit: # number  # 优惠券使用金额条件 如满500减300就是500,没有就填0  
+    startTime: # string  # 优惠券生效时间  
+    type: # integer  # 类型：0-新手券，1-分享券，2-活动券  
+
+app.insertCoupon:
+  summary: 新增优惠券
+  method: post
+  path: /boss/app/coupon/v2/insertCoupon
+  json: 
+    amount: # number  # 优惠金额  
+    couponName: # string  # 优惠券名称  
+    endTime: # string  # 优惠券失效时间  
+    limit: # number  # 优惠券使用金额条件 如满500减300就是500,没有就填0  
+    startTime: # string  # 优惠券生效时间  
+    type: # integer  # 类型：0-新手券，1-分享券，2-活动券  
+
+app.modifyLogo:
+  summary: 修改头像
+  method: post
+  path: /boss/app/customer_info/v2/customer/modifyLogo
+  json: 
+    customerGuid: # integer  # 客户主键  
+    url: # string  # 客户logo地址  
+
+app.saveCustomerInfo:
+  summary: 保存客户信息
+  method: post
+  path: /boss/app/customer_info/v2/customer/save
+  json: 
+    advertiserType: # integer  # 广告主类型  
+    bankAccount: # string  # 开户银行账号  
+    bankName: # string  # 开户银行名称  
+    cityCode: # string  # 市编码  
+    companyName: # string  # 企业名称  
+    companyType: # integer  # 企业认证类型  
+    contactPhone: # string  # 联系电话  
+    contacter: # string  # 联系人  
+    customerGuid: # integer  # 客户主键  
+    email: # string  # 邮箱  
+    industryCodes: # array  # 所属行业  
+    licenceNo: # string  # 营业执照或身份证号码  
+    logoUrl: # string  # 头像地址链接  
+    provinceCode: # string  # 省编码  
+    urlIdCard1: # string  # 身份证正面图片地址  
+    urlIdCard2: # string  # 身份证反面图片地址  
+    urlIdCard3: # string  # 手持身份证图片地址  
+    urlLicenceNo: # string  # 营业执照图片地址  
+
+app.setPayPassword:
+  summary: 设置支付密码
+  method: post
+  path: /boss/app/customer_info/v2/customer/set_pay_pwd
+  json: 
+    payPassword: # string  #   
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.getCustomerInfo:
+  summary: 查询客户信息
+  method: get
+  path: /boss/app/customer_info/v2/customer/{customerGuid}
+  params: 
+    customerGuid: # integer  # optional customerGuid  
+
+app.getCustomerName:
+  summary: 根据邀请码获取客户名称
+  method: get
+  path: /boss/app/customer_info/v2/getCustomerName/{inviteCode}
+  params: 
+    inviteCode: # string  # optional inviteCode  
+
+app.getLable:
+  summary: 标签查询接口
+  method: post
+  path: /boss/app/deviceSlot/v2/getLable
+
+app.getNbhdFilterSlotAll:
+  summary: 请求符合搜索要求的广告位小区列表(包括详情)
+  method: post
+  path: /boss/app/deviceSlot/v2/getNbhdFilterSlotAll
+  json: 
+    addressCodes: # array  # 需要过滤行政区域编码路径,支持多个选择 格式 -- 31100.23231.123.  
+    ageCodes: # array  # 年龄,NULL代表不限  
+    budget: # number  # 预算  
+    communitys: # array  # 社区类型,NULL代表不限  
+    contentTime: # integer  # 广告内容时长  
+    lat: # string  # 纬度  
+    lon: # string  # 经度  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+    round: # integer  # 周边半径  
+    selectSlotRequest: # 广告位相关查询参数  
+    sexCode: # string  # 性别,NULL代表不限  
+    type: # string  # 搜索类型：1文字列表模式2地图模式  
+
+app.getNbhdShortageAll:
+  summary: 缺货列表(包括详情)
+  method: post
+  path: /boss/app/deviceSlot/v2/getNbhdShortageAll
+  json: 
+    contentTime: # integer  # 广告内容时长  
+    endDate: # string  #   
+    frequencyTime: # array  #   
+    nbGuids: # array  #   
+    startDate: # string  #   
+
+app.getTimeFrequencyList:
+  summary: 时间段列表查询接口
+  method: post
+  path: /boss/app/deviceSlot/v2/getTimeFrequencyList
+
+app.saveFeedback:
+  summary: 新增用户反馈
+  method: post
+  path: /boss/app/feedback/v2/saveFeedback
+  json: 
+    feedbackMsg: # string  # 反馈信息内容  
+    feedbackType: # integer  # 反馈信息类型  
+    feedbackUrls: # array  # 反馈信息图片链接列表  
+
+app.getHomepageInfo:
+  summary: 获取首页广告、活动信息
+  method: get
+  path: /boss/app/homepage/v2/homepageInfo
+  params: 
+    type: # string  # optional type  
+
+app.passwordLogin:
+  summary: APP密码登录
+  method: post
+  path: /boss/app/login/v2/passwordLogin
+  json: 
+    password: # string  #   
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.verifyCodeLogin:
+  summary: APP验证码登录
+  method: post
+  path: /boss/app/login/v2/verifyCodeLogin
+  json: 
+    password: # string  #   
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.deleteMessages:
+  summary: 批量软删除消息
+  method: delete
+  path: /boss/app/message/v2/deleteMessages
+  params: 
+    ids: # string  # optional ids  
+
+app.getOrderPage:
+  summary: 获取消息分页列表
+  method: post
+  path: /boss/app/message/v2/getMessagePage
+  json: 
+    messageType: # string  # 消息类型  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+app.receiveMessages:
+  summary: 查看消息类型以及各个消息类型是否有未读信息
+  method: get
+  path: /boss/app/message/v2/receiveMessages
+
+app.viewMessage:
+  summary: 批量查看消息
+  method: get
+  path: /boss/app/message/v2/viewMessages
+  params: 
+    ids: # string  # optional ids  
+
+app.pay:
+  summary: pay
+  method: post
+  path: /boss/app/payment/v2/pay
+  json: 
+    orderGuid: # integer  # 订单主键  
+    payPassword: # string  # 支付密码  
+
+app.getUserAuthMenu:
+  summary: 获取用户有权限的菜单
+  method: get
+  path: /boss/app/user/v2/auth_menu
+
+app.modifyPassword:
+  summary: 用户修改密码
+  method: post
+  path: /boss/app/user/v2/modify_password
+  json: 
+    confirmPassword: # string  #   
+    oldPassword: # string  #   
+    password: # string  #   
+
+app.modifyPhone:
+  summary: 用户修改手机号
+  method: post
+  path: /boss/app/user/v2/modify_phone
+  json: 
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.register:
+  summary: 客户用户注册
+  method: post
+  path: /boss/app/user/v2/register
+  json: 
+    confirmPassword: # string  #   
+    inviteCode: # string  #   
+    password: # string  #   
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.resetPassWord:
+  summary: 用户忘记密码（重置密码）
+  method: post
+  path: /boss/app/user/v2/reset_password
+  json: 
+    confirmPassword: # string  #   
+    password: # string  #   
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.userCheck:
+  summary: 用户信息修改身份认证
+  method: post
+  path: /boss/app/user/v2/user_check
+  json: 
+    phoneNumber: # string  #   
+    smsVerifyCode: # string  #   
+
+app.getAmount:
+  summary: 获取使用优惠券后应付金额
+  method: post
+  path: /boss/app/userCoupon/v2/getAmount
+
+app.getUserCoupon:
+  summary: 查询账户所有优惠券
+  method: get
+  path: /boss/app/userCoupon/v2/getUserCoupon
+  params: 
+    clienteleGuid: # integer  # optional clienteleGuid  
+
+app.insertAccountCoupon:
+  summary: 新增账户优惠券
+  method: post
+  path: /boss/app/userCoupon/v2/insertAccountCoupon
+
+app.updateStatus:
+  summary: 更新优惠券使用状态
+  method: post
+  path: /boss/app/userCoupon/v2/updateStatus
+
+app.insertUserCoupon:
+  summary: 修改用户拥有优惠券状态
+  method: post
+  path: /boss/app/userCoupon/v2/updateUserCoupon
+
+dmp.getOrderGraphByDay:
+  summary: 获得订单统计报表
+  method: post
+  path: /boss/dmp/v2/getOrderGraphByDay
+  json: 
+    orderCode: # string  # 订单编码  
+    targetDate: # string  # 目标日期，不传入按日期图形，传入日期按照频次展示  
+
+dmp.getOrderGraphByTime:
+  summary: 获得订单统计报表
+  method: post
+  path: /boss/dmp/v2/getOrderGraphByTime
+  json: 
+    orderCode: # string  # 订单编码  
+    targetDate: # string  # 目标日期，不传入按日期图形，传入日期按照频次展示  

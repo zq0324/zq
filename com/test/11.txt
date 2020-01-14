@@ -1,0 +1,28 @@
+12312
+sda
+das
+dsa打
+das
+adsd
+大大大是
+鼓捣鼓捣
+最近在用python搞串口工具，串口的数据
+流基本读写都要靠bytearray，而我们从pyqt
+的串口得到的数据都是string格式，那么我们就必须考虑
+到如何对这两种数据进行转换了，才能正确的对数据收发
+。
+先考虑的接收串口数据，那么
+格式是bytearray，下面需要处理成stri
+ng格式来显示：
+#按string来显示,byarray代表接收到的数据
+readstr = byarray.decode('utf-8')#这样就直接转换成str格式
+ 
+#强制转换
+readstr = str(byarray)#用这种方式得到的数据会带有b''字符
+ 
+#将读取的数据按十六进制字符显示，能让我们直接看到最底层的数据格式
+readstr = ' '.join(hex(x) for x in byarray)#这句能把byarray里的数据遍历一遍转换成hex格式，而且用空格相连
+将string格式转换成bytearray:
+44444
+ssss
+dsafaf  ssss        sss

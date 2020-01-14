@@ -1,0 +1,26 @@
+*** Settings ***
+Library           Collections
+Library           requests
+Resource          ../../Common/param.txt
+Resource          ../../Common/check_result.txt
+Variables         ../../lib/config.py
+Library           ../../lib/parse_case.py
+Library           ../../lib/requests_api.py
+
+*** Test Cases ***
+correct_id
+    [Tags]    correct
+    ${response}    ${validate}    run_post    ${env}    dataManager.getAlarmConfig
+    log    ${response}
+    ${flag}    Run keyword and return status    check_status_code    ${response.status_code}
+    run keyword if    ${flag}    check_result    ${response}    ${validate}
+
+error_ID
+    ${error_id}    create dictionary    hardwareId=11112222
+    ${error_code}    create dictionary    check_code=20111004
+    ${response}    ${validate}    run_post    ${env}    dataManager.getAlarmConfig    ${error_id}    ${error_code}
+    log    ${response}
+    ${flag}    Run keyword and return status    check_status_code    ${response.status_code}
+    ${true}    convert to boolean    true
+    should be equal    ${flag}    ${true}
+    run keyword if    ${flag}    check_result    ${response}    ${validate}

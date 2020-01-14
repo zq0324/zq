@@ -1,0 +1,5004 @@
+{
+"paths": {
+"/v1/elevator/getStatus": {
+  "post": {
+    "summary": "获取设备在线状态",
+    "operationId": "GetDevStatus",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerDevStatusGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerDevStatusGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/ctrlDc2Dc": {
+  "post": {
+    "summary": "控制电源板DC-DC通道",
+    "operationId": "CtrlPwrDc2Dc",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrDc2DcCtrlRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrDc2DcCtrlReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/getDevInfo": {
+  "post": {
+    "summary": "读取电源板设备信息",
+    "operationId": "GetPwrDevInfo",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrDevInfoGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrDevInfoGetReq"
+        }
+      }
+    ]
+
+  }
+},
+"/v1/elevator/power/getDevType": {
+  "post": {
+    "summary": "读取电源板设备类型",
+    "operationId": "GetPwrDevType",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrDevTypeGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrDevTypeGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/getResetTime": {
+  "post": {
+    "summary": "读取电源板复位时间",
+    "operationId": "GetPwrResetTime",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrResetTimeGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrResetTimeGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/restore": {
+  "post": {
+    "summary": "恢复电源板出厂设置",
+    "operationId": "RestorePwr",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrRestoreRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrRestoreReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/setAlarm": {
+  "post": {
+    "summary": "设置电源板报警上报",
+    "operationId": "SetPwrAlarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrAlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrAlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/setMaintain": {
+  "post": {
+    "summary": "设置电源板维护信息",
+    "operationId": "SetPwrMaintain",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrMaintainSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrMaintainSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/setResetTime": {
+  "post": {
+    "summary": "设置电源板复位时间",
+    "operationId": "SetPwrResetTime",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrResetTimeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrResetTimeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/setRtStatusRptCyc": {
+  "post": {
+    "summary": "设置电源板实时状态数据上报时间间隔",
+    "operationId": "SetPwrRtStatusRptCyc",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrRtStatusRptCycSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrRtStatusRptCycSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/power/setTime": {
+  "post": {
+    "summary": "设置电源板时间",
+    "operationId": "SetPwrTime",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerPwrTimeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerPwrTimeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/maintain": {
+  "post": {
+    "summary": "维护智能屏(仅通知）",
+    "operationId": "MaintainScrn",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnMaintainRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnMaintainReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/pcap": {
+  "post": {
+    "summary": "在智能屏上进行抓包",
+    "operationId": "PcapScrn",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnPcapRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnPcapReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setAlarm": {
+  "post": {
+    "summary": "设置智能屏报警上报",
+    "operationId": "SetScrnAlarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnAlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnAlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setBoardcastConfirm": {
+  "post": {
+    "summary": "设置智能屏语音播报确认信息",
+    "operationId": "SetScrnBoardcastConf",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnBoardcastConfSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnBoardcastConfSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setEstAlarm": {
+  "post": {
+    "summary": "设置智能屏手扶梯告警配置",
+    "operationId": "SetScrnEstAlarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnEstAlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnEstAlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setFireCtrl": {
+  "post": {
+    "summary": "设置智能屏消控视频",
+    "operationId": "SetScrnFireCtrl",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnFireCtrlSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnFireCtrlSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setLogo": {
+  "post": {
+    "summary": "设置智能屏LOGO",
+    "operationId": "SetScrnLogo",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnLogoSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnLogoSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setPlacateVideo": {
+  "post": {
+    "summary": "设置智能屏安抚视频",
+    "operationId": "SetScrnPlacateVideo",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnPlacateVideoSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnPlacateVideoSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setSoundVolume": {
+  "post": {
+    "summary": "设置智能屏音量",
+    "operationId": "SetScrnSoundVolume",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnSoundVolumeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnSoundVolumeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setSpeaker": {
+  "post": {
+    "summary": "设置智能屏扬声器",
+    "operationId": "SetScrnSpeaker",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnSpeakerSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnSpeakerSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setWaterPressure": {
+  "post": {
+    "summary": "设置智能屏水压相关配置",
+    "operationId": "SetScrnWaterPres",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnWaterPresSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnWaterPresSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/setWifi": {
+  "post": {
+    "summary": "设置智能屏WIFI",
+    "operationId": "SetScrnWifi",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnWifiSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnWifiSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/updatePlaybill": {
+  "post": {
+    "summary": "智能屏\n///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n更新智能屏播放单（仅通知）",
+    "operationId": "UpdateScrnPlaybill",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnPlaybillUpdateRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnPlaybillUpdateReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/screen/upgrade": {
+  "post": {
+    "summary": "升级智能屏（仅通知）",
+    "operationId": "UpgradeScrn",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerScrnUpgradeRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerScrnUpgradeReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/SetRtStatusCyc": {
+  "post": {
+    "summary": "设置信号板实时状态上报时间间隔\n测试",
+    "operationId": "SetSigRtStatusRptCyc",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRtStatusRptCycSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRtStatusRptCycSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/clearCalib": {
+  "post": {
+    "summary": "清除信号板标定信息",
+    "operationId": "clearSigCalib",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibClearRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibClearReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/ctrlElev": {
+  "post": {
+    "summary": "信号板控制电梯",
+    "operationId": "CtrlSigElev",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigElevCtrlRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigElevCtrlReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/ctrlRs232": {
+  "post": {
+    "summary": "信号板第三方RS232控制",
+    "operationId": "CtrlSigRs232",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232CtrlRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232CtrlReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/ctrlRs485": {
+  "post": {
+    "summary": "信号板第三方RS485控制",
+    "operationId": "CtrlSigRs485",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485CtrlRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485CtrlReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getAI1Alarm": {
+  "post": {
+    "summary": "获取信号板AI1传感器报警配置",
+    "operationId": "GetSigAI1Alarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI1AlarmGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI1AlarmGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getCalibFloor": {
+  "post": {
+    "summary": "读取信号板标定楼层",
+    "operationId": "getSigCalibFloor",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibFloorGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibFloorGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getCalibTemp": {
+  "post": {
+    "summary": "读取信号板标定温度",
+    "operationId": "getSigCalibTemp",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibTempGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibTempGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getDevInfo": {
+  "post": {
+    "summary": "获取信号板产品信息",
+    "operationId": "GetSigDevInfo",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigDevInfoGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigDevInfoGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getDevType": {
+  "post": {
+    "summary": "获取信号板模块类型",
+    "operationId": "GetSigDevType",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigDevTypeGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigDevTypeGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getFloorCalcComp": {
+  "post": {
+    "summary": "读取信号板楼层判断补偿参数",
+    "operationId": "GetSigFloorCalcComp",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorCalcCompGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorCalcCompGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getIOParam": {
+  "post": {
+    "summary": "获取信号板配置参数（信号点）",
+    "operationId": "GetSigIOParam",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigIOParamGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigIOParamGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getLevelInfoV1": {
+  "post": {
+    "summary": "读取信号板平层感应信息V1",
+    "operationId": "GetSigLevelInfoV1",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelInfoV1GetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelInfoV1GetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getLevelInfoV2": {
+  "post": {
+    "summary": "读取信号板平层信息",
+    "operationId": "getSigLevelInfoV2",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelInfoV2GetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelInfoV2GetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getLog": {
+  "post": {
+    "summary": "读取信号板LOG",
+    "operationId": "GetSigLog",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLogGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLogGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getPhototube": {
+  "post": {
+    "summary": "读取信号板光电管信息",
+    "operationId": "GetSigPhototube",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigPhototubeGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigPhototubeGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getRs232Data": {
+  "post": {
+    "summary": "获取信号板RS232模块数据",
+    "operationId": "GetSigRs232Data",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232DataGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232DataGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getRs232Param": {
+  "post": {
+    "summary": "获取信号板RS232配置参数",
+    "operationId": "GetSigRs232Param",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232ParamGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232ParamGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getRs485Data": {
+  "post": {
+    "summary": "获取信号板RS485模块数据",
+    "operationId": "GetSigRs485Data",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485DataGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485DataGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getRs485Param": {
+  "post": {
+    "summary": "获取信号板RS485配置参数",
+    "operationId": "GetSigRs485Param",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485ParamGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485ParamGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/getTime": {
+  "post": {
+    "summary": "获取信号板时间",
+    "operationId": "GetSigTime",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigTimeGetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigTimeGetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/reset": {
+  "post": {
+    "summary": "复位信号板",
+    "operationId": "ResetSig",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigResetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigResetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/restore": {
+  "post": {
+    "summary": "恢复信号板出厂设置",
+    "operationId": "restoreSig",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRestoreRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRestoreReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI1Alarm": {
+  "post": {
+    "summary": "设置信号板AI1传感器报警配置",
+    "operationId": "SetSigAI1Alarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI1AlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI1AlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI2Alarm": {
+  "post": {
+    "summary": "设置信号板AI2传感器报警",
+    "operationId": "SetSigAI2Alarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI2AlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI2AlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI2Range": {
+  "post": {
+    "summary": "设置信号板A2传感器量程",
+    "operationId": "SetSigAI2Range",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI2RangeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI2RangeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI3Alarm": {
+  "post": {
+    "summary": "设置信号板AI3传感器报警",
+    "operationId": "SetSigAI3Alarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI3AlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI3AlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI3Range": {
+  "post": {
+    "summary": "设置信号板A3传感器量程",
+    "operationId": "SetSigAI3Range",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI3RangeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI3RangeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI4Alarm": {
+  "post": {
+    "summary": "设置信号板AI4传感器报警",
+    "operationId": "SetSigAI4Alarm",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI4AlarmSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI4AlarmSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setAI4Range": {
+  "post": {
+    "summary": "设置信号板A4传感器量程",
+    "operationId": "SetSigAI4Range",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigAI4RangeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigAI4RangeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setCalibFloor": {
+  "post": {
+    "summary": "设置信号板标定楼层",
+    "operationId": "setSigCalibFloor",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibFloorSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibFloorSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setCalibTemp": {
+  "post": {
+    "summary": "设置信号板标定温度",
+    "operationId": "setSigCalibTemp",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibTempSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigCalibTempSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setDI1Logic": {
+  "post": {
+    "summary": "设置信号板DI1正反逻辑",
+    "operationId": "SetSigDI1Logic",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigDI1LogicSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigDI1LogicSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setDI2Logic": {
+  "post": {
+    "summary": "设置信号板DI2正反逻辑",
+    "operationId": "SetSigDI2Logic",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigDI2LogicSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigDI2LogicSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setDebug": {
+  "post": {
+    "summary": "打开/关闭信号板调试",
+    "operationId": "SetSigDebug",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigDebugSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigDebugSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setFloorCalcComp": {
+  "post": {
+    "summary": "设置信号板楼层判断补偿参数",
+    "operationId": "SetSigFloorCalcComp",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorCalcCompSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorCalcCompSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setFloorParam": {
+  "post": {
+    "summary": "配置信号板楼层信息",
+    "operationId": "SetSigFloorParam",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorParamSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigFloorParamSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setLevelFloor": {
+  "post": {
+    "summary": "设置信号板平层感应楼层",
+    "operationId": "SetSigLevelFloor",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelFloorSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelFloorSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setLevelLearn": {
+  "post": {
+    "summary": "设置信号板平层感应自学习参数",
+    "operationId": "SetSigLevelLearn",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelLearnSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelLearnSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setLevelPreMagThr": {
+  "post": {
+    "summary": "设置信号板平层感应阈值（气压和磁力)",
+    "operationId": "SetSigLevelPreMagThr",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelPreMagThrSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelPreMagThrSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setLevelTimeThr": {
+  "post": {
+    "summary": "配置信号板平层感应参数（时间相隔阈值）",
+    "operationId": "SetSigLevelTimeThr",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelTimeThrSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigLevelTimeThrSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setRs232Param": {
+  "post": {
+    "summary": "配置信号板RS232",
+    "operationId": "SetSigRs232Param",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232ParamSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs232ParamSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setRs485Param": {
+  "post": {
+    "summary": "配置信号板RS485",
+    "operationId": "SetSigRs485Param",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485ParamSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigRs485ParamSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/setTime": {
+  "post": {
+    "summary": "校时信号板",
+    "operationId": "SetSigTime",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigTimeSetRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigTimeSetReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/switchPartition": {
+  "post": {
+    "summary": "切换信号板分区",
+    "operationId": "SwitchSigPartition",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigPartitionSwitchRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigPartitionSwitchReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/upgrade": {
+  "post": {
+    "summary": "升级信号板",
+    "operationId": "UpgradeSig",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigUpgradeRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigUpgradeReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+},
+"/v1/elevator/signal/upgradeDataPush": {
+  "post": {
+    "summary": "向信号板发送升级数据",
+    "operationId": "PushSigUpgradeData",
+    "responses": {
+      "200": {
+        "description": "",
+        "schema": {
+          "$ref": "#/definitions/innerSigUpgradeDataPshRsp"
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "body",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/innerSigUpgradeDataPshReq"
+        }
+      }
+    ],
+    "tags": [
+      "BizApiService"
+    ]
+  }
+}
+},
+"definitions": {
+"innerDevStatusGetReq": {
+  "type": "object",
+  "properties": {
+    "deviceID": {
+      "type": "string"
+    }
+  },
+  "title": "设备在线状态请求"
+},
+"innerDevStatusGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerDevStatusGetRspData"
+    }
+  },
+  "title": "设备在线状态响应"
+},
+"innerDevStatusGetRspData": {
+  "type": "object",
+  "properties": {
+    "deviceID": {
+      "type": "string"
+    },
+    "online": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+},
+"innerEstAlarmParam": {
+  "type": "object",
+  "properties": {
+    "configParam": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "judgeType": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "threshold": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏手扶梯报警设置请求"
+},
+"innerFloorCalibrate": {
+  "type": "object",
+  "properties": {
+    "floor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "validFlag": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "floorDesc": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "楼层标定结构"
+},
+"innerPwrAlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "alarmConfig1": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "alarmConfig2": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "alarmConfig3": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "alarmConfig4": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "res1": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "res2": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "电源板报警上报配置请求"
+},
+"innerPwrAlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrAlarmSetRspData"
+    }
+  },
+  "title": "电源板报警上报配置响应\n上行"
+},
+"innerPwrAlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrDc2DcCtrlReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "channelControl": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "电源板DC-DC通道控制请求\n下行"
+},
+"innerPwrDc2DcCtrlRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrDc2DcCtrlRspData"
+    }
+  },
+  "title": "电源板DC-DC通道控制响应\n上行"
+},
+"innerPwrDc2DcCtrlRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrDevInfoGetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  },
+  "title": "电源板设备信息读取请求\n下行"
+},
+"innerPwrDevInfoGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrDevInfoGetRspData"
+    }
+  },
+  "title": "电源板设备信息的读取响应\n上行"
+},
+"innerPwrDevInfoGetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "harewareVer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "softwareVer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "madeTime": {
+      "type": "string",
+      "format": "int64"
+    },
+    "madeFactory": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "customID": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "manufacturer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "designTime": {
+      "type": "string",
+      "format": "int64"
+    }
+  }
+},
+"innerPwrDevTypeGetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  },
+  "title": "电源板设备类型读取请求\n下行"
+},
+"innerPwrDevTypeGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrDevTypeGetRspData"
+    }
+  },
+  "title": "电源板设备类型读取响应\n上行"
+},
+"innerPwrDevTypeGetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "deviceType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerPwrMaintainSetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "achCmd": {
+      "type": "string"
+    }
+  },
+  "title": "电源板维护信息设置请求"
+},
+"innerPwrMaintainSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrMaintainSetRspData"
+    }
+  },
+  "title": "电源板维护信息设置响应\n上行"
+},
+"innerPwrMaintainSetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "achCmd": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrResetTimeGetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  },
+  "title": "电源板复位时间读取请求"
+},
+"innerPwrResetTimeGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrResetTimeGetRspData"
+    }
+  },
+  "title": "电源板复位时间读取响应\n上行"
+},
+"innerPwrResetTimeGetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "resetHour": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "resetMinute": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerPwrResetTimeSetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "resetHour": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "resetMinute": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "电源板复位时间设置请求"
+},
+"innerPwrResetTimeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrResetTimeSetRspData"
+    }
+  },
+  "title": "电源板复位时间设置响应\n上行"
+},
+"innerPwrResetTimeSetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrRestoreReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  },
+  "title": "电源板恢复出厂设置请求\n下行"
+},
+"innerPwrRestoreRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrRestoreRspData"
+    }
+  },
+  "title": "电源板恢复出厂设置响应\n上行"
+},
+"innerPwrRestoreRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrRtStatusRptCycSetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "intervalTime": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "电源板实时状态数据上报时间间隔配置请求\n下行"
+},
+"innerPwrRtStatusRptCycSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrRtStatusRptCycSetRspData"
+    }
+  },
+  "title": "电源板实时状态数据上报时间间隔配置响应\n上行"
+},
+"innerPwrRtStatusRptCycSetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerPwrTimeSetReq": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "format": "int64"
+    }
+  },
+  "title": "电源板校时请求\n下行"
+},
+"innerPwrTimeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerPwrTimeSetRspData"
+    }
+  },
+  "title": "电源板校时响应\n上行"
+},
+"innerPwrTimeSetRspData": {
+  "type": "object",
+  "properties": {
+    "powerID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnAlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "alarmType": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "state": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "上行\n智能屏告警、一键呼救配置请求"
+},
+"innerScrnAlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnAlarmSetRspData"
+    }
+  },
+  "title": "智能屏告警、一键呼救配置响应\n上行"
+},
+"innerScrnAlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnBoardcastConfSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "warnCode": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "warnDatetime": {
+      "type": "string",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏语音播报确认请求"
+},
+"innerScrnBoardcastConfSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnBoardcastConfSetRspData"
+    }
+  },
+  "title": "智能屏语音播报确认响应\n上行"
+},
+"innerScrnBoardcastConfSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnEstAlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "warnCode": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "alarmConfig": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/innerEstAlarmParam"
+      }
+    }
+  }
+},
+"innerScrnEstAlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnEstAlarmSetRspData"
+    }
+  },
+  "title": "智能屏手扶梯报警设置响应\n上行"
+},
+"innerScrnEstAlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnFireCtrlSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "state": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏消控视频播放设置请求"
+},
+"innerScrnFireCtrlSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnFireCtrlSetRspData"
+    }
+  },
+  "title": "智能屏消控视频播放设置响应\n上行"
+},
+"innerScrnFireCtrlSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnLogoSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "type": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "title": "智能屏Logo设置请求"
+},
+"innerScrnLogoSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnLogoSetRspData"
+    }
+  },
+  "title": "智能屏Logo设置响应"
+},
+"innerScrnLogoSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnMaintainReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "optType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏维护请求"
+},
+"innerScrnMaintainRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnMaintainRspData"
+    }
+  },
+  "title": "智能屏维护响应(特殊返回)\n上行"
+},
+"innerScrnMaintainRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnPcapReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "optType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏抓包请求"
+},
+"innerScrnPcapRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnPcapRspData"
+    }
+  },
+  "title": "智能屏抓包响应(特殊返回)\n上行"
+},
+"innerScrnPcapRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnPlacateVideoSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "warnCode": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "type": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "url": {
+      "type": "string"
+    },
+    "md5": {
+      "type": "string"
+    }
+  },
+  "title": "智能屏安抚视频设置请求"
+},
+"innerScrnPlacateVideoSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnPlacateVideoSetRspData"
+    }
+  },
+  "title": "智能屏安抚视频设置响应"
+},
+"innerScrnPlacateVideoSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnPlaybillUpdateReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  },
+  "title": "智能屏播放单更新请求"
+},
+"innerScrnPlaybillUpdateRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnPlaybillUpdateRspData"
+    }
+  },
+  "title": "智能屏播放单更新响应（特殊返回）\n上行"
+},
+"innerScrnPlaybillUpdateRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnSoundVolumeSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "soundVolume": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏音量设置请求"
+},
+"innerScrnSoundVolumeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnSoundVolumeSetRspData"
+    }
+  },
+  "title": "智能屏音量设置响应(特殊返回)\n上行"
+},
+"innerScrnSoundVolumeSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnSpeakerSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "isEnable": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "broadCastMode": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏扬声器设置请求"
+},
+"innerScrnSpeakerSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnSpeakerSetRspData"
+    }
+  },
+  "title": "智能屏扬声器设置响应\n上行"
+},
+"innerScrnSpeakerSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnUpgradeReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "deviceType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏升级请求"
+},
+"innerScrnUpgradeRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnUpgradeRspData"
+    }
+  },
+  "title": "智能屏升级响应(特殊返回)\n上行"
+},
+"innerScrnUpgradeRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnWaterPresSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "waterPress": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "int64"
+      }
+    },
+    "normal": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "lowStandard": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "highThr": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "type": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "智能屏水压相关设置请求"
+},
+"innerScrnWaterPresSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnWaterPresSetRspData"
+    }
+  },
+  "title": "智能屏水压相关设置请求响应\n上行"
+},
+"innerScrnWaterPresSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerScrnWifiSetReq": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    },
+    "optType": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "nameLength": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "wifiName": {
+      "type": "string"
+    },
+    "passLength": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "wifiPass": {
+      "type": "string"
+    }
+  },
+  "title": "智能屏WIFI配置请求"
+},
+"innerScrnWifiSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerScrnWifiSetRspData"
+    }
+  },
+  "title": "智能屏WIFI配置响应(特殊返回)\n上行"
+},
+"innerScrnWifiSetRspData": {
+  "type": "object",
+  "properties": {
+    "screenID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI1AlarmGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板AI1传感器报警配置读取请求\n下行"
+},
+"innerSigAI1AlarmGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI1AlarmGetRspData"
+    }
+  },
+  "title": "信号板AI1传感器报警配置读取响应\n上行"
+},
+"innerSigAI1AlarmGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai1LowAlarm": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "ai1HighAlarm": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+},
+"innerSigAI1AlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai1LowAlarm": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "ai1HighAlarm": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板AI1传感器报警配置写入请求\n下行"
+},
+"innerSigAI1AlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI1AlarmSetRspData"
+    }
+  },
+  "title": "信号板AI1传感器报警配置写入响应\n上行"
+},
+"innerSigAI1AlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI2AlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai2LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai2HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板AI2传感器报警设置请求\n下行"
+},
+"innerSigAI2AlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI2AlarmSetRspData"
+    }
+  },
+  "title": "信号板AI2传感器报警配置响应\n上行"
+},
+"innerSigAI2AlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI2RangeSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai2LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai2highRange": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板A2传感器量程设置请求\n下行"
+},
+"innerSigAI2RangeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI2RangeSetRspData"
+    }
+  },
+  "title": "信号板AI2传感器量程设置响应\n上行"
+},
+"innerSigAI2RangeSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI3AlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai3LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai3HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板AI3传感器报警设置请求\n下行"
+},
+"innerSigAI3AlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI3AlarmSetRspData"
+    }
+  },
+  "title": "信号板AI3传感器报警配置响应\n上行"
+},
+"innerSigAI3AlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI3RangeSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai3LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai3HighRange": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板AI3传感器量程配置请求\n下行"
+},
+"innerSigAI3RangeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI3RangeSetRspData"
+    }
+  },
+  "title": "信号板A3传感器量程配置响应\n上行"
+},
+"innerSigAI3RangeSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI4AlarmSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai4LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai4HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板AI4传感器报警设置请求\n下行"
+},
+"innerSigAI4AlarmSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI4AlarmSetRspData"
+    }
+  },
+  "title": "信号板AI4传感器报警配置响应\n上行"
+},
+"innerSigAI4AlarmSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigAI4RangeSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "ai4LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ai4HighRange": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板AI4传感器量程配置请求\n下行"
+},
+"innerSigAI4RangeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigAI4RangeSetRspData"
+    }
+  },
+  "title": "信号板Ai4传感器量程配置响应\n上行"
+},
+"innerSigAI4RangeSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigCalibClearReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板标定信息清除请求\n下行"
+},
+"innerSigCalibClearRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigCalibClearRspData"
+    }
+  },
+  "title": "信号板标定信息清除响应\n上行"
+},
+"innerSigCalibClearRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigCalibFloorGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板标定楼层读取请求\n下行"
+},
+"innerSigCalibFloorGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigCalibFloorGetRspData"
+    }
+  },
+  "title": "信号板标定楼层读取响应\n上行"
+},
+"innerSigCalibFloorGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "calicInfo": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/innerFloorCalibrate"
+      }
+    }
+  }
+},
+"innerSigCalibFloorSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "calicInfo": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/innerFloorCalibrate"
+      }
+    }
+  },
+  "title": "信号板标定楼层设置请求\n下行"
+},
+"innerSigCalibFloorSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigCalibFloorSetRspData"
+    }
+  },
+  "title": "信号板标定楼层设置响应\n上行"
+},
+"innerSigCalibFloorSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigCalibTempGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板标定温度读取请求\n下行"
+},
+"innerSigCalibTempGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigCalibTempGetRspData"
+    }
+  },
+  "title": "信号板标定温度读取响应\n上行"
+},
+"innerSigCalibTempGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "temprature": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+},
+"innerSigCalibTempSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "temprature": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板标定温度设置请求\n下行"
+},
+"innerSigCalibTempSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigCalibTempSetRspData"
+    }
+  },
+  "title": "信号板标定温度设置响应\n上行"
+},
+"innerSigCalibTempSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigDI1LogicSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "di1Loginc": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板DI1正反逻辑配置请求\n下行"
+},
+"innerSigDI1LogicSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigDI1LogicSetRspData"
+    }
+  },
+  "title": "信号板DI1正反逻辑配置响应\n上行"
+},
+"innerSigDI1LogicSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigDI2LogicSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "diLogic": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板DI2正反逻辑配置请求\n下行"
+},
+"innerSigDI2LogicSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigDI2LogicSetRspData"
+    }
+  },
+  "title": "信号板DI2正反逻辑配置响应\n上行"
+},
+"innerSigDI2LogicSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigDebugSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "debugFlag": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板调试开关设置请求\n下行"
+},
+"innerSigDebugSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigDebugSetRspData"
+    }
+  },
+  "title": "信号板调试开始设置响应\n上行"
+},
+"innerSigDebugSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigDevInfoGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板产品信息读取请求\n下行"
+},
+"innerSigDevInfoGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigDevInfoGetRspData"
+    }
+  },
+  "title": "信号板产品信息读取响应\n上行"
+},
+"innerSigDevInfoGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "hareWareVer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "softWareVer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "madeTime": {
+      "type": "string",
+      "format": "int64"
+    },
+    "madeFactory": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "CustomID": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "manufacturer": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "designTime": {
+      "type": "string",
+      "format": "int64"
+    }
+  }
+},
+"innerSigDevTypeGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板模块类型读取请求\n下行"
+},
+"innerSigDevTypeGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigDevTypeGetRspData"
+    }
+  },
+  "title": "信号板模块类型读取响应\n上行"
+},
+"innerSigDevTypeGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "moduleType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigElevCtrlReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "command": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板控制电梯请求\n下行"
+},
+"innerSigElevCtrlRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigElevCtrlRspData"
+    }
+  },
+  "title": "信号板控制电梯响应\n上行"
+},
+"innerSigElevCtrlRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigFloorCalcCompGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板楼层判断补偿参数读取请求\n下行"
+},
+"innerSigFloorCalcCompGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigFloorCalcCompGetRspData"
+    }
+  },
+  "title": "信号板楼层判断补偿参数读取响应\n上行"
+},
+"innerSigFloorCalcCompGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "compenateValue": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+},
+"innerSigFloorCalcCompSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "compenateValue": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板楼层判断补偿参数设置请求\n下行"
+},
+"innerSigFloorCalcCompSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigFloorCalcCompSetRspData"
+    }
+  },
+  "title": "信号板楼层判断补偿参数设置响应\n上行"
+},
+"innerSigFloorCalcCompSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigFloorParamSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "floorInfo": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板楼层信息配置请求\n下行"
+},
+"innerSigFloorParamSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigFloorParamSetRspData"
+    }
+  },
+  "title": "信号板楼层信息配置响应\n上行"
+},
+"innerSigFloorParamSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigIOParamGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板模块配置参数（信号点）读取请求\n下行"
+},
+"innerSigIOParamGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigIOParamGetRspData"
+    }
+  },
+  "title": "信号板模块配置参数（信号点）读取响应\n上行"
+},
+"innerSigIOParamGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "AI1LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI1HighRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI2LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI2HighRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI3LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI3HighRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI4LowRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI4HighRange": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI1LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI1HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI2LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI2HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI3LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI3HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI4LowAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "AI4HighAlarm": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "DI1": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "DI2": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigLevelFloorSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "highestFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "curFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "lowestFloor": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "title": "信号板平层感应楼层信息配置请求\n下行"
+},
+"innerSigLevelFloorSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelFloorSetRspData"
+    }
+  },
+  "title": "信号板平层感觉楼层信息配置应答\n上行"
+},
+"innerSigLevelFloorSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigLevelInfoV1GetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板平层感应信息读取请求\n读取楼层、阈值等信息\n下行"
+},
+"innerSigLevelInfoV1GetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelInfoV1GetRspData"
+    }
+  },
+  "title": "信号板平层感应信息读取响应\n上行"
+},
+"innerSigLevelInfoV1GetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "highestFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "curFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "lowestFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "stopTimeThreshold": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "changeTimeThreshold": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "photoelectricTubeCurStat": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "selfLearnFlg": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigLevelInfoV2GetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板平层信息读取请求\n下行"
+},
+"innerSigLevelInfoV2GetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelInfoV2GetRspData"
+    }
+  },
+  "title": "信号板平台信息读取响应\n上行"
+},
+"innerSigLevelInfoV2GetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "highestFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "curFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "lowestFloor": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "direction": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "status": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigLevelLearnSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "selfLearnFlag": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板平层感应自学习配置请求\n下行"
+},
+"innerSigLevelLearnSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelLearnSetRspData"
+    }
+  },
+  "title": "信号板平层感应自学习配置响应\n上行"
+},
+"innerSigLevelLearnSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigLevelPreMagThrSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "pressureThreshold": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "magneticThreshold": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板平层感应阈值设置请求\n下行"
+},
+"innerSigLevelPreMagThrSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelPreMagThrSetRspData"
+    }
+  },
+  "title": "信号板平层感应阈值设置响应\n上行"
+},
+"innerSigLevelPreMagThrSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigLevelTimeThrSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "flatLayerStopTimeThreshold": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "floorChangeTimeThreshold": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板平层感应参数(时间阈值)配置请求\n下行"
+},
+"innerSigLevelTimeThrSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLevelTimeThrSetRspData"
+    }
+  },
+  "title": "信号板平层感应参数配置响应\n上行"
+},
+"innerSigLevelTimeThrSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigLogGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板LOG读取请求"
+},
+"innerSigLogGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigLogGetRspData"
+    }
+  },
+  "title": "信号板LOG读取响应\n上行"
+},
+"innerSigLogGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "logInfo": {
+      "type": "string"
+    }
+  }
+},
+"innerSigPartitionSwitchReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板分区切换请求\n下行"
+},
+"innerSigPartitionSwitchRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigPartitionSwitchRspData"
+    }
+  },
+  "title": "信号板分区切换响应\n上行"
+},
+"innerSigPartitionSwitchRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigPhototubeGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板光电管信息读取请求\n下行"
+},
+"innerSigPhototubeGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigPhototubeGetRspData"
+    }
+  },
+  "title": "信号板光电管信息读取响应\n上行"
+},
+"innerSigPhototubeGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "gd1Info": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "gd2Info": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigResetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板复位请求\n下行"
+},
+"innerSigResetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigResetRspData"
+    }
+  },
+  "title": "信号板复位响应\n上行"
+},
+"innerSigResetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRestoreReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板恢复出厂设置请求\n下行"
+},
+"innerSigRestoreRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRestoreRspData"
+    }
+  },
+  "title": "信号板恢复出厂设置响应\n上行"
+},
+"innerSigRestoreRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRs232CtrlReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "command": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板第三方RS232控制命令请求\n下行"
+},
+"innerSigRs232CtrlRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs232CtrlRspData"
+    }
+  },
+  "title": "信号板第三方RS232控制命令响应\n上行"
+},
+"innerSigRs232CtrlRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRs232DataGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板RS232数据读取请求\n下行"
+},
+"innerSigRs232DataGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs232DataGetRspData"
+    }
+  },
+  "title": "信号板RS232数据读取响应\n上行"
+},
+"innerSigRs232DataGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "rs232Data": {
+      "type": "string",
+      "format": "byte"
+    }
+  }
+},
+"innerSigRs232ParamGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板RS232配置参数读取请求\n下行"
+},
+"innerSigRs232ParamGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs232ParamGetRspData"
+    }
+  },
+  "title": "信号板RS232配置参数读取响应\n上行"
+},
+"innerSigRs232ParamGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "Baudrate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "Data": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "Stop": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "Check": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "ComType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigRs232ParamSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "braudrate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "data": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "stop": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "check": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "comType": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "cmd": {
+      "type": "string",
+      "format": "byte"
+    }
+  },
+  "title": "信号板RS232配置请求\n下行"
+},
+"innerSigRs232ParamSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs232ParamSetRspData"
+    }
+  },
+  "title": "信号板RS232配置响应\n上行"
+},
+"innerSigRs232ParamSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRs485CtrlReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "command": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "title": "信号板第三方RS485控制命令请求\n下行"
+},
+"innerSigRs485CtrlRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs485CtrlRspData"
+    }
+  },
+  "title": "信号板第三方RS485控制命令响应\n上行"
+},
+"innerSigRs485CtrlRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRs485DataGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板RS485模块数据读取请求\n下行"
+},
+"innerSigRs485DataGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs485DataGetRspData"
+    }
+  },
+  "title": "信号板RS485模块数据读取响应\n上行"
+},
+"innerSigRs485DataGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "rs485Data": {
+      "type": "string",
+      "format": "byte"
+    }
+  }
+},
+"innerSigRs485ParamGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板RS485配置参数读取请求\n下行"
+},
+"innerSigRs485ParamGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs485ParamGetRspData"
+    }
+  },
+  "title": "信号板RS485配置参数读取响应\n上行"
+},
+"innerSigRs485ParamGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "braudrate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "data": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "stop": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "check": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "comType": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+},
+"innerSigRs485ParamSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "braudrate": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "data": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "stop": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "check": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "comType": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "cmd": {
+      "type": "string",
+      "format": "byte"
+    }
+  },
+  "title": "信号板RS485配置请求\n下行"
+},
+"innerSigRs485ParamSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRs485ParamSetRspData"
+    }
+  },
+  "title": "信号板RS485配置响应\n上行"
+},
+"innerSigRs485ParamSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigRtStatusRptCycSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "reportCycle": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "token": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "title": "信号板实时状态上报时间间隔配置请求\n下行"
+},
+"innerSigRtStatusRptCycSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigRtStatusRptCycSetRspData"
+    }
+  },
+  "title": "信号板实时状态上报时间间隔配置响应\n上行"
+},
+"innerSigRtStatusRptCycSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigTimeGetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板时间读取请求\n下行"
+},
+"innerSigTimeGetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigTimeGetRspData"
+    }
+  },
+  "title": "信号板时间读取响应\n上行"
+},
+"innerSigTimeGetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "format": "int64"
+    }
+  }
+},
+"innerSigTimeSetReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "format": "int64"
+    }
+  },
+  "title": "信号板校时请求\n下行"
+},
+"innerSigTimeSetRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigTimeSetRspData"
+    }
+  },
+  "title": "信号板校时响应\n上行"
+},
+"innerSigTimeSetRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigUpgradeDataPshReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    },
+    "upgradeData": {
+      "type": "string",
+      "format": "byte"
+    }
+  },
+  "title": "信号板升级数据推送"
+},
+"innerSigUpgradeDataPshRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigUpgradeDataPshRspData"
+    }
+  }
+},
+"innerSigUpgradeDataPshRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+},
+"innerSigUpgradeReq": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  },
+  "title": "信号板升级请求"
+},
+"innerSigUpgradeRsp": {
+  "type": "object",
+  "properties": {
+    "errCode": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "errDesc": {
+      "type": "string"
+    },
+    "data": {
+      "$ref": "#/definitions/innerSigUpgradeRspData"
+    }
+  },
+  "title": "信号板升级响应\n上行"
+},
+"innerSigUpgradeRspData": {
+  "type": "object",
+  "properties": {
+    "signalID": {
+      "type": "string"
+    }
+  }
+}
+}
+}

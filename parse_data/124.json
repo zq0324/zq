@@ -1,0 +1,40 @@
+{
+  "caseID": 2,
+  "inputURL": [
+    "生产",
+    3,
+    1
+  ],
+  "inputPath": "/api",
+  "requestMethod": "GET",
+  "paramsData": [
+    {
+      "paramsKey": "apple",
+      "paramsValue": "3"
+    },
+    {
+      "paramsKey": "pear",
+      "paramsValue": "4"
+    }
+  ],
+  "headersData": [
+    {
+      "headersKey": "contentType",
+      "headersValue": "dws"
+    },
+    {
+      "headersKey": "test",
+      "headersValue": "test"
+    }
+  ],
+  "bodyType": "raw",
+  "formWWWData": [
+    {
+      "formWWWKey": "123",
+      "formWWWValue": "123",
+      "formWWWDescription": null
+    }
+  ],
+  "rawType": "",
+  "rawContent": "{\n\t'content':@123\n}"
+}

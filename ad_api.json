@@ -1,0 +1,3682 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "广告平台boss(app) API"
+    },
+    "host": "10.10.0.244:10090",
+    "basePath": "/boss",
+    "tags": [
+        {
+            "name": "app-account-controller",
+            "description": "账户管理API"
+        },
+        {
+            "name": "app-account-history-controller",
+            "description": "账单明细API"
+        },
+        {
+            "name": "app-activity-controller",
+            "description": "活动API"
+        },
+        {
+            "name": "app-coupon-controller",
+            "description": "优惠券管理Api"
+        },
+        {
+            "name": "app-customer-controller",
+            "description": "App客户信息管理（完善信息、修改、支付密码）"
+        },
+        {
+            "name": "app-customer-user-controller",
+            "description": "用户注册Api"
+        },
+        {
+            "name": "app-device-slot-controller",
+            "description": "广告位/点位管理API"
+        },
+        {
+            "name": "app-dmp-controller",
+            "description": "统计报表api"
+        },
+        {
+            "name": "app-feedback-controller",
+            "description": "用户反馈API"
+        },
+        {
+            "name": "app-home-page-controller",
+            "description": "App首页Api"
+        },
+        {
+            "name": "app-login-controller",
+            "description": "App应用登录、登出管理API"
+        },
+        {
+            "name": "app-message-controller",
+            "description": "消息通知类API"
+        },
+        {
+            "name": "app-payment-controller",
+            "description": "支付管理API"
+        },
+        {
+            "name": "app-user-coupon-controller",
+            "description": "用户优惠券管理Api"
+        }
+    ],
+    "paths": {
+        "/app/account/v2/getAccountBalance": {
+            "get": {
+                "tags": [
+                    "app-account-controller"
+                ],
+                "summary": "getAccountBalance",
+                "operationId": "getAccountBalanceUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/accounthistory/v2/getBrokerageAndActivityInfo": {
+            "get": {
+                "tags": [
+                    "app-account-history-controller"
+                ],
+                "summary": "所有佣金以及佣金活动信息",
+                "operationId": "getBrokerageAndActivityInfoUsingGET",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«AppBrokerageWithActivityBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/accounthistory/v2/getBrokerageHistory": {
+            "get": {
+                "tags": [
+                    "app-account-history-controller"
+                ],
+                "summary": "获取当前用户的佣金记录历史",
+                "operationId": "getBrokerageHistoryUsingGET",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "pageIndex",
+                        "in": "query",
+                        "description": "pageIndex",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "description": "pageSize",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«PageInfo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/accounthistory/v2/getSimpleBrokerageInfo": {
+            "get": {
+                "tags": [
+                    "app-account-history-controller"
+                ],
+                "summary": "获取佣金的简要信息",
+                "operationId": "getSimpleBrokerageInfoUsingGET",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "timeType",
+                        "in": "query",
+                        "description": "时间类型，1：昨天，2：本月，3：上月",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«AppSimpleBrokerageBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/accounthistory/v2/queryAccountHistory": {
+            "get": {
+                "tags": [
+                    "app-account-history-controller"
+                ],
+                "summary": "queryAccountHistory",
+                "operationId": "queryAccountHistoryUsingGET",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "optType",
+                        "in": "query",
+                        "description": "需要查询的账单类型，1：充值 2：消费",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«AppTotalHistoryBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/activity/v2/getActivityDetailList": {
+            "get": {
+                "tags": [
+                    "app-activity-controller"
+                ],
+                "summary": "活动详情(根据用途查询)",
+                "operationId": "getActivityDetailListUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "clienteleGuid",
+                        "in": "query",
+                        "description": "客户id",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "allowEmptyValue": false
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "用途 1首页 2个人中心",
+                        "required": true,
+                        "type": "string",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«ActivityBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/activity/v2/getActivityRewardList": {
+            "post": {
+                "tags": [
+                    "app-activity-controller"
+                ],
+                "summary": "活动奖励列表",
+                "operationId": "getActivityRewardListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "activityRewardReq",
+                        "description": "活动奖励查询",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/ActivityRewardReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«PageInfo«ActivityRewardBo»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/coupon/v2/getCouponList": {
+            "post": {
+                "tags": [
+                    "app-coupon-controller"
+                ],
+                "summary": "查询优惠券信息",
+                "operationId": "getCouponListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "couponInfoRequest",
+                        "description": "couponInfoRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CouponInfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/coupon/v2/insertCoupon": {
+            "post": {
+                "tags": [
+                    "app-coupon-controller"
+                ],
+                "summary": "新增优惠券",
+                "operationId": "insertCouponUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "couponInfoRequest",
+                        "description": "couponInfoRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CouponInfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/customer_info/v2/customer/modifyLogo": {
+            "post": {
+                "tags": [
+                    "app-customer-controller"
+                ],
+                "summary": "修改头像",
+                "operationId": "modifyLogoUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ModifyLogoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/customer_info/v2/customer/save": {
+            "post": {
+                "tags": [
+                    "app-customer-controller"
+                ],
+                "summary": "保存客户信息",
+                "operationId": "saveCustomerInfoUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "infoRequest",
+                        "description": "infoRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SaveCustomerInfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«CustomerInfoBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/customer_info/v2/customer/set_pay_pwd": {
+            "post": {
+                "tags": [
+                    "app-customer-controller"
+                ],
+                "summary": "设置支付密码",
+                "operationId": "setPayPasswordUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "request",
+                        "description": "request",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerPayPasswordRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/customer_info/v2/customer/{customerGuid}": {
+            "get": {
+                "tags": [
+                    "app-customer-controller"
+                ],
+                "summary": "查询客户信息",
+                "operationId": "getCustomerInfoUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "customerGuid",
+                        "in": "path",
+                        "description": "customerGuid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«CustomerInfoBo»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/customer_info/v2/getCustomerName/{inviteCode}": {
+            "get": {
+                "tags": [
+                    "app-customer-controller"
+                ],
+                "summary": "根据邀请码获取客户名称",
+                "operationId": "getCustomerNameUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "inviteCode",
+                        "in": "path",
+                        "description": "inviteCode",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/deviceSlot/v2/getLable": {
+            "post": {
+                "tags": [
+                    "app-device-slot-controller"
+                ],
+                "summary": "标签查询接口",
+                "operationId": "getLableUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«List«LabelTypeResponse»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/deviceSlot/v2/getNbhdFilterSlotAll": {
+            "post": {
+                "tags": [
+                    "app-device-slot-controller"
+                ],
+                "summary": "请求符合搜索要求的广告位小区列表(包括详情)",
+                "operationId": "getNbhdFilterSlotAllUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "selectDeviceRequest",
+                        "description": "selectDeviceRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SelectDeviceRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«NbhdFilterSlotResponse»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/deviceSlot/v2/getNbhdShortageAll": {
+            "post": {
+                "tags": [
+                    "app-device-slot-controller"
+                ],
+                "summary": "缺货列表(包括详情)",
+                "operationId": "getNbhdShortageAllUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "shortageRequest",
+                        "description": "shortageRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ShortageRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«List«NeighborhoodDetailsResponse»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/deviceSlot/v2/getTimeFrequencyList": {
+            "post": {
+                "tags": [
+                    "app-device-slot-controller"
+                ],
+                "summary": "时间段列表查询接口",
+                "operationId": "getTimeFrequencyListUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«List«FrequencyParentBean»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/feedback/v2/saveFeedback": {
+            "post": {
+                "tags": [
+                    "app-feedback-controller"
+                ],
+                "summary": "新增用户反馈",
+                "description": "登录成功返回token值,APP端请求必须在header设置token",
+                "operationId": "saveFeedbackUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "addFeedbackRequest",
+                        "description": "addFeedbackRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AddFeedbackRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/homepage/v2/homepageInfo": {
+            "get": {
+                "tags": [
+                    "app-home-page-controller"
+                ],
+                "summary": "获取首页广告、活动信息",
+                "operationId": "getHomepageInfoUsingGET",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "type",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«Map«string,object»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/login/v2/passwordLogin": {
+            "post": {
+                "tags": [
+                    "app-login-controller"
+                ],
+                "summary": "APP密码登录",
+                "description": "登录成功返回token值,APP端请求必须在header设置token",
+                "operationId": "passwordLoginUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "loginRequest",
+                        "description": "loginRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerLoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«JSONObject»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/login/v2/verifyCodeLogin": {
+            "post": {
+                "tags": [
+                    "app-login-controller"
+                ],
+                "summary": "APP验证码登录",
+                "description": "登录成功返回token值,APP端请求必须在header设置token",
+                "operationId": "verifyCodeLoginUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "loginRequest",
+                        "description": "loginRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerLoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«JSONObject»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/message/v2/deleteMessages": {
+            "delete": {
+                "tags": [
+                    "app-message-controller"
+                ],
+                "summary": "批量软删除消息",
+                "description": "guid之间用逗号隔开",
+                "operationId": "deleteMessagesUsingDELETE_1",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "ids",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/message/v2/getMessagePage": {
+            "post": {
+                "tags": [
+                    "app-message-controller"
+                ],
+                "summary": "获取消息分页列表",
+                "operationId": "getOrderPageUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "queryMessageReq",
+                        "description": "queryMessageReq",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QueryMessageAPPReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«PageInfo«消息分页»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/message/v2/receiveMessages": {
+            "get": {
+                "tags": [
+                    "app-message-controller"
+                ],
+                "summary": "查看消息类型以及各个消息类型是否有未读信息",
+                "operationId": "receiveMessagesUsingGET_1",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«List«消息类型是否全部查看»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/message/v2/viewMessages": {
+            "get": {
+                "tags": [
+                    "app-message-controller"
+                ],
+                "summary": "批量查看消息",
+                "operationId": "viewMessageUsingGET_1",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "ids",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/payment/v2/pay": {
+            "post": {
+                "tags": [
+                    "app-payment-controller"
+                ],
+                "summary": "pay",
+                "operationId": "payUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "paymentRequest",
+                        "description": "paymentRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PaymentRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/auth_menu": {
+            "get": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "获取用户有权限的菜单",
+                "operationId": "getUserAuthMenuUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«Map«string,object»»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/modify_password": {
+            "post": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "用户修改密码",
+                "operationId": "modifyPasswordUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "modifyPwdRequest",
+                        "description": "modifyPwdRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerModifyPwdRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/modify_phone": {
+            "post": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "用户修改手机号",
+                "operationId": "modifyPhoneUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "modifyPhoneRequest",
+                        "description": "modifyPhoneRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerModifyPhoneRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/register": {
+            "post": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "客户用户注册",
+                "operationId": "registerUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "registerRequest",
+                        "description": "registerRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerRegisterRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/reset_password": {
+            "post": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "用户忘记密码（重置密码）",
+                "operationId": "resetPassWordUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "resetPwdRequest",
+                        "description": "resetPwdRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerResetPwdRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/user/v2/user_check": {
+            "post": {
+                "tags": [
+                    "app-customer-user-controller"
+                ],
+                "summary": "用户信息修改身份认证",
+                "operationId": "userCheckUsingPOST_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "modifyPhoneRequest",
+                        "description": "modifyPhoneRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CustomerModifyPhoneRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/userCoupon/v2/getAmount": {
+            "post": {
+                "tags": [
+                    "app-user-coupon-controller"
+                ],
+                "summary": "获取使用优惠券后应付金额",
+                "operationId": "getAmountUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "amount",
+                        "in": "query",
+                        "description": "amount",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "name": "guid",
+                        "in": "query",
+                        "description": "guid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/userCoupon/v2/getUserCoupon": {
+            "get": {
+                "tags": [
+                    "app-user-coupon-controller"
+                ],
+                "summary": "查询账户所有优惠券",
+                "operationId": "getUserCouponUsingGET_1",
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "clienteleGuid",
+                        "in": "query",
+                        "description": "clienteleGuid",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/userCoupon/v2/insertAccountCoupon": {
+            "post": {
+                "tags": [
+                    "app-user-coupon-controller"
+                ],
+                "summary": "新增账户优惠券",
+                "operationId": "insertAccountCouponUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "clienteleGuid",
+                        "in": "query",
+                        "description": "clienteleGuid",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "couponGuid",
+                        "in": "query",
+                        "description": "couponGuid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/userCoupon/v2/updateStatus": {
+            "post": {
+                "tags": [
+                    "app-user-coupon-controller"
+                ],
+                "summary": "更新优惠券使用状态",
+                "operationId": "updateStatusUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "guid",
+                        "in": "query",
+                        "description": "guid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "orderCode",
+                        "in": "query",
+                        "description": "orderCode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "status",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/app/userCoupon/v2/updateUserCoupon": {
+            "post": {
+                "tags": [
+                    "app-user-coupon-controller"
+                ],
+                "summary": "修改用户拥有优惠券状态",
+                "operationId": "insertUserCouponUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "guid",
+                        "in": "query",
+                        "description": "guid",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "isAdd",
+                        "in": "query",
+                        "description": "isAdd",
+                        "required": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/dmp/v2/getOrderGraphByDay": {
+            "post": {
+                "tags": [
+                    "app-dmp-controller"
+                ],
+                "summary": "获得订单统计报表",
+                "operationId": "getOrderGraphByDayUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "orderGraphRequest",
+                        "description": "orderGraphRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OrderGraphRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«OrderGraphAllResponse»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/dmp/v2/getOrderGraphByTime": {
+            "post": {
+                "tags": [
+                    "app-dmp-controller"
+                ],
+                "summary": "获得订单统计报表",
+                "operationId": "getOrderGraphByTimeUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "orderGraphRequest",
+                        "description": "orderGraphRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OrderGraphRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MessageResponse«OrderGraphTimeResponse»"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "Token": [
+                            "global"
+                        ]
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "securityDefinitions": {
+        "Token": {
+            "type": "apiKey",
+            "name": "token",
+            "in": "header"
+        }
+    },
+    "definitions": {
+        "ActivityBo": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "活动编码"
+                },
+                "createTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "创建时间"
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "活动简介"
+                },
+                "detailRule": {
+                    "type": "string",
+                    "description": "活动规则详情"
+                },
+                "isUse": {
+                    "type": "string",
+                    "description": "1首页 2个人中心"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "活动名称"
+                },
+                "pic": {
+                    "type": "string",
+                    "description": "活动长图片"
+                },
+                "ruleNumber": {
+                    "type": "string",
+                    "description": "规则编码"
+                },
+                "ruleParam": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "活动跳转页面url"
+                },
+                "widePic": {
+                    "type": "string",
+                    "description": "活动宽图片"
+                }
+            },
+            "title": "ActivityBo"
+        },
+        "ActivityDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "活动编码"
+                },
+                "createTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "创建时间"
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "活动简介"
+                },
+                "detailRule": {
+                    "type": "string",
+                    "description": "活动规则详情"
+                },
+                "isUse": {
+                    "type": "string",
+                    "description": "1首页 2个人中心,3佣金banner"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "活动名称"
+                },
+                "pic": {
+                    "type": "string",
+                    "description": "活动长图片"
+                },
+                "ruleNumber": {
+                    "type": "string",
+                    "description": "规则编码"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "活动跳转页面url"
+                },
+                "widePic": {
+                    "type": "string",
+                    "description": "活动宽图片"
+                }
+            },
+            "title": "ActivityDto"
+        },
+        "ActivityRewardBo": {
+            "type": "object",
+            "properties": {
+                "invitedClienteleGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "被邀请人客户id"
+                },
+                "invitedPhone": {
+                    "type": "string",
+                    "description": "被邀请人手机号"
+                },
+                "registerTime": {
+                    "type": "string",
+                    "description": "注册时间"
+                },
+                "reward": {
+                    "type": "string",
+                    "description": "奖励"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "状态 0未达成 1已达成"
+                }
+            },
+            "title": "ActivityRewardBo"
+        },
+        "ActivityRewardReq": {
+            "type": "object",
+            "properties": {
+                "clienteleGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户ID"
+                },
+                "orderBy": {
+                    "type": "string",
+                    "description": "排序(DESC or ASC)"
+                },
+                "orderField": {
+                    "type": "string",
+                    "description": "需要排序的字段名"
+                },
+                "pageIndex": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "当前页码"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "每页显示条数"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "状态0未达成 1已达成"
+                }
+            },
+            "title": "ActivityRewardReq"
+        },
+        "AddFeedbackRequest": {
+            "type": "object",
+            "properties": {
+                "feedbackMsg": {
+                    "type": "string",
+                    "description": "反馈信息内容"
+                },
+                "feedbackType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "反馈信息类型"
+                },
+                "feedbackUrls": {
+                    "type": "array",
+                    "description": "反馈信息图片链接列表",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "title": "AddFeedbackRequest"
+        },
+        "AdvCustomerCheck": {
+            "type": "object",
+            "properties": {
+                "checkMan": {
+                    "type": "string",
+                    "description": "审核人"
+                },
+                "checkResult": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "审核结果 0-不通过  1-通过"
+                },
+                "checkTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "审核日期"
+                },
+                "checkType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "审核类型"
+                },
+                "customerGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户主键guid"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "审核描述"
+                },
+                "guid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "主键"
+                },
+                "updateTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "更新日期"
+                }
+            },
+            "title": "AdvCustomerCheck"
+        },
+        "AppAccountHistoryBo": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "description": "金额"
+                },
+                "createTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "创建时间"
+                },
+                "optDeatailName": {
+                    "type": "string",
+                    "description": "流水类型名称"
+                },
+                "optDetailCode": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "流水类型具体编码"
+                },
+                "optType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "流水类型"
+                }
+            },
+            "title": "AppAccountHistoryBo"
+        },
+        "AppBrokerageWithActivityBo": {
+            "type": "object",
+            "properties": {
+                "activities": {
+                    "type": "array",
+                    "description": "活动列表",
+                    "items": {
+                        "$ref": "#/definitions/ActivityDto"
+                    }
+                },
+                "totalAmount": {
+                    "type": "number",
+                    "description": "佣金总金额"
+                }
+            },
+            "title": "AppBrokerageWithActivityBo"
+        },
+        "AppMonthAccountHistoryBo": {
+            "type": "object",
+            "properties": {
+                "list": {
+                    "type": "array",
+                    "description": "每个月中的每天的数据",
+                    "items": {
+                        "$ref": "#/definitions/AppAccountHistoryBo"
+                    }
+                },
+                "month": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "月份"
+                },
+                "totalAmount": {
+                    "type": "number",
+                    "description": "月份总金额"
+                }
+            },
+            "title": "AppMonthAccountHistoryBo"
+        },
+        "AppSimpleBrokerageBo": {
+            "type": "object",
+            "properties": {
+                "orderCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "订单总数"
+                },
+                "totalAmount": {
+                    "type": "number",
+                    "description": "佣金总金额"
+                }
+            },
+            "title": "AppSimpleBrokerageBo"
+        },
+        "AppTotalHistoryBo": {
+            "type": "object",
+            "properties": {
+                "dateRange": {
+                    "type": "string",
+                    "description": "时间范围"
+                },
+                "totalAmount": {
+                    "type": "number",
+                    "description": "总金额"
+                },
+                "yearList": {
+                    "type": "array",
+                    "description": "年数据列表",
+                    "items": {
+                        "$ref": "#/definitions/AppYearAccountHistoryBo"
+                    }
+                }
+            },
+            "title": "AppTotalHistoryBo"
+        },
+        "AppYearAccountHistoryBo": {
+            "type": "object",
+            "properties": {
+                "monthList": {
+                    "type": "array",
+                    "description": "月份数据",
+                    "items": {
+                        "$ref": "#/definitions/AppMonthAccountHistoryBo"
+                    }
+                },
+                "year": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "年份"
+                }
+            },
+            "title": "AppYearAccountHistoryBo"
+        },
+        "CouponInfoRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "description": "优惠金额"
+                },
+                "couponName": {
+                    "type": "string",
+                    "description": "优惠券名称"
+                },
+                "endTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "优惠券失效时间"
+                },
+                "limit": {
+                    "type": "number",
+                    "description": "优惠券使用金额条件 如满500减300就是500,没有就填0"
+                },
+                "startTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "优惠券生效时间"
+                },
+                "type": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "类型：0-新手券，1-分享券，2-活动券"
+                }
+            },
+            "title": "CouponInfoRequest"
+        },
+        "CustomerInfoBo": {
+            "type": "object",
+            "properties": {
+                "advertiserType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "广告主类型 1-个人，2-企业"
+                },
+                "applyType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户申请审核类型 基础平台数据字典类 INFOCHECKAPPLYTYPE"
+                },
+                "applyTypeName": {
+                    "type": "string",
+                    "description": "客户申请审核类型名称"
+                },
+                "bankAccount": {
+                    "type": "string",
+                    "description": "开户银行账号"
+                },
+                "bankName": {
+                    "type": "string",
+                    "description": "开户银行名称"
+                },
+                "checkBeanList": {
+                    "type": "array",
+                    "description": "审核数据",
+                    "items": {
+                        "$ref": "#/definitions/AdvCustomerCheck"
+                    }
+                },
+                "cityCode": {
+                    "type": "string",
+                    "description": "市编码"
+                },
+                "companyName": {
+                    "type": "string",
+                    "description": "企业名称"
+                },
+                "companyType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "企业认证类型 基础平台数据字典类 ADV_QYRZLX"
+                },
+                "companyTypeName": {
+                    "type": "string",
+                    "description": "企业认证类型名称"
+                },
+                "contactPhone": {
+                    "type": "string",
+                    "description": "联系电话"
+                },
+                "contacter": {
+                    "type": "string",
+                    "description": "联系人"
+                },
+                "createTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "创建时间"
+                },
+                "customerGrade": {
+                    "type": "string",
+                    "description": "客户等级 基础平台数据字典类 ADVCUSTOMERGRADE"
+                },
+                "customerGradeName": {
+                    "type": "string",
+                    "description": "客户等级名称"
+                },
+                "customerGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户主键"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "邮箱"
+                },
+                "industryCodes": {
+                    "type": "array",
+                    "description": "所属行业 基础平台数据字典类 ADV_INDUSTRY",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "inviteCode": {
+                    "type": "string",
+                    "description": "邀请码"
+                },
+                "licenceNo": {
+                    "type": "string",
+                    "description": "营业执照或身份证号码"
+                },
+                "logoUrl": {
+                    "type": "string",
+                    "description": "客户企业logo链接地址"
+                },
+                "merchantsTypes": {
+                    "type": "string",
+                    "description": "客户包含的商户分类 基础平台数据字典类 ADVBUSSINESSTYPE"
+                },
+                "merchantsTypesNames": {
+                    "type": "string",
+                    "description": "客户包含的商户分类名称"
+                },
+                "parentInvite": {
+                    "type": "string",
+                    "description": "父级邀请码"
+                },
+                "provinceCode": {
+                    "type": "string",
+                    "description": "省编码"
+                },
+                "status": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "审核状态 0-无效,1-有效"
+                },
+                "totalBalance": {
+                    "type": "number",
+                    "format": "double",
+                    "description": "客户账户余额"
+                },
+                "updateTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "更新时间"
+                },
+                "urlIdCard1": {
+                    "type": "string",
+                    "description": "身份证正面图片地址"
+                },
+                "urlIdCard2": {
+                    "type": "string",
+                    "description": "身份证反面图片地址"
+                },
+                "urlIdCard3": {
+                    "type": "string",
+                    "description": "手持身份证图片地址"
+                },
+                "urlLicenceNo": {
+                    "type": "string",
+                    "description": "营业执照图片地址"
+                },
+                "withPayPassword": {
+                    "type": "boolean",
+                    "description": "是否有支付密码 true-有支付密码，false-没有支付密码"
+                }
+            },
+            "title": "CustomerInfoBo"
+        },
+        "CustomerLoginRequest": {
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "smsVerifyCode": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerLoginRequest"
+        },
+        "CustomerModifyPhoneRequest": {
+            "type": "object",
+            "properties": {
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "smsVerifyCode": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerModifyPhoneRequest"
+        },
+        "CustomerModifyPwdRequest": {
+            "type": "object",
+            "properties": {
+                "confirmPassword": {
+                    "type": "string"
+                },
+                "oldPassword": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerModifyPwdRequest"
+        },
+        "CustomerPayPasswordRequest": {
+            "type": "object",
+            "properties": {
+                "payPassword": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "smsVerifyCode": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerPayPasswordRequest"
+        },
+        "CustomerRegisterRequest": {
+            "type": "object",
+            "properties": {
+                "confirmPassword": {
+                    "type": "string"
+                },
+                "inviteCode": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "smsVerifyCode": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerRegisterRequest"
+        },
+        "CustomerResetPwdRequest": {
+            "type": "object",
+            "properties": {
+                "confirmPassword": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "smsVerifyCode": {
+                    "type": "string"
+                }
+            },
+            "title": "CustomerResetPwdRequest"
+        },
+        "DaysNbhdSlotResponse": {
+            "type": "object",
+            "properties": {
+                "deviceCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "有效点位数目"
+                },
+                "frequencyDeviceList": {
+                    "type": "array",
+                    "description": "频次列表",
+                    "items": {
+                        "$ref": "#/definitions/FrequencyDeviceSlot"
+                    }
+                },
+                "slotAmount": {
+                    "type": "number",
+                    "description": "金额"
+                },
+                "targetDate": {
+                    "type": "string",
+                    "description": "日期"
+                }
+            },
+            "title": "DaysNbhdSlotResponse"
+        },
+        "DaysNbhdSlotShortageResponse": {
+            "type": "object",
+            "properties": {
+                "frequencyDeviceList": {
+                    "type": "array",
+                    "description": "频次列表",
+                    "items": {
+                        "$ref": "#/definitions/FrequencyDeviceSlot"
+                    }
+                },
+                "shortageAmount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "天缺货总计"
+                },
+                "targetDate": {
+                    "type": "string",
+                    "description": "日期"
+                }
+            },
+            "title": "DaysNbhdSlotShortageResponse"
+        },
+        "FrequencyBean": {
+            "type": "object",
+            "properties": {
+                "frequencyName": {
+                    "type": "string",
+                    "description": "频次名称"
+                },
+                "groupName": {
+                    "type": "string"
+                },
+                "guid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "频次主键"
+                }
+            },
+            "title": "FrequencyBean"
+        },
+        "FrequencyDeviceSlot": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "缺货数量/可投数量"
+                },
+                "frequencyTime": {
+                    "type": "string",
+                    "description": "频次id"
+                },
+                "frequencyTimeName": {
+                    "type": "string",
+                    "description": "频次名称"
+                }
+            },
+            "title": "FrequencyDeviceSlot"
+        },
+        "FrequencyParentBean": {
+            "type": "object",
+            "properties": {
+                "frequencyBeans": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FrequencyBean"
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "分组名称"
+                }
+            },
+            "title": "FrequencyParentBean"
+        },
+        "JSONObject": {
+            "type": "object",
+            "title": "JSONObject",
+            "additionalProperties": {
+                "type": "object"
+            }
+        },
+        "LabelDetailsResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "编码"
+                },
+                "context": {
+                    "type": "string",
+                    "description": "中文名称"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "标签类型 1：人群标签，2社区标签"
+                },
+                "value": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "值"
+                }
+            },
+            "title": "LabelDetailsResponse"
+        },
+        "LabelResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "编码"
+                },
+                "codeName": {
+                    "type": "string",
+                    "description": "编码名称"
+                },
+                "lableDetailsResponses": {
+                    "type": "array",
+                    "description": "标签值",
+                    "items": {
+                        "$ref": "#/definitions/LabelDetailsResponse"
+                    }
+                },
+                "selectType": {
+                    "type": "string",
+                    "description": "选择类型 1：单选 2：多选"
+                }
+            },
+            "title": "LabelResponse"
+        },
+        "LabelTypeResponse": {
+            "type": "object",
+            "properties": {
+                "labelResponses": {
+                    "type": "array",
+                    "description": "标签集合",
+                    "items": {
+                        "$ref": "#/definitions/LabelResponse"
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "description": "类型 1：人群 2社区"
+                },
+                "typeName": {
+                    "type": "string",
+                    "description": "类型名称"
+                }
+            },
+            "title": "LabelTypeResponse"
+        },
+        "MessageResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "返回数据"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse"
+        },
+        "MessageResponse«ActivityBo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/ActivityBo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«ActivityBo»"
+        },
+        "MessageResponse«AppBrokerageWithActivityBo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/AppBrokerageWithActivityBo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«AppBrokerageWithActivityBo»"
+        },
+        "MessageResponse«AppSimpleBrokerageBo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/AppSimpleBrokerageBo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«AppSimpleBrokerageBo»"
+        },
+        "MessageResponse«AppTotalHistoryBo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/AppTotalHistoryBo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«AppTotalHistoryBo»"
+        },
+        "MessageResponse«CustomerInfoBo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/CustomerInfoBo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«CustomerInfoBo»"
+        },
+        "MessageResponse«JSONObject»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "返回数据",
+                    "additionalProperties": {
+                        "type": "object"
+                    }
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«JSONObject»"
+        },
+        "MessageResponse«List«FrequencyParentBean»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "array",
+                    "description": "返回数据",
+                    "items": {
+                        "$ref": "#/definitions/FrequencyParentBean"
+                    }
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«List«FrequencyParentBean»»"
+        },
+        "MessageResponse«List«LabelTypeResponse»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "array",
+                    "description": "返回数据",
+                    "items": {
+                        "$ref": "#/definitions/LabelTypeResponse"
+                    }
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«List«LabelTypeResponse»»"
+        },
+        "MessageResponse«List«NeighborhoodDetailsResponse»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "array",
+                    "description": "返回数据",
+                    "items": {
+                        "$ref": "#/definitions/NeighborhoodDetailsResponse"
+                    }
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«List«NeighborhoodDetailsResponse»»"
+        },
+        "MessageResponse«List«消息类型是否全部查看»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "array",
+                    "description": "返回数据",
+                    "items": {
+                        "$ref": "#/definitions/消息类型是否全部查看"
+                    }
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«List«消息类型是否全部查看»»"
+        },
+        "MessageResponse«Map«string,object»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "返回数据"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«Map«string,object»»"
+        },
+        "MessageResponse«NbhdFilterSlotResponse»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/NbhdFilterSlotResponse"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«NbhdFilterSlotResponse»"
+        },
+        "MessageResponse«OrderGraphAllResponse»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/OrderGraphAllResponse"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«OrderGraphAllResponse»"
+        },
+        "MessageResponse«OrderGraphTimeResponse»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/OrderGraphTimeResponse"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«OrderGraphTimeResponse»"
+        },
+        "MessageResponse«PageInfo«ActivityRewardBo»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/PageInfo«ActivityRewardBo»"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«PageInfo«ActivityRewardBo»»"
+        },
+        "MessageResponse«PageInfo«消息分页»»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/PageInfo«消息分页»"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«PageInfo«消息分页»»"
+        },
+        "MessageResponse«PageInfo»": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "状态码"
+                },
+                "data": {
+                    "description": "返回数据",
+                    "$ref": "#/definitions/PageInfo"
+                },
+                "msg": {
+                    "type": "string",
+                    "description": "状态信息"
+                }
+            },
+            "title": "MessageResponse«PageInfo»"
+        },
+        "ModifyLogoRequest": {
+            "type": "object",
+            "properties": {
+                "customerGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户主键"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "客户logo地址"
+                }
+            },
+            "title": "ModifyLogoRequest"
+        },
+        "NbhdFilterSlotResponse": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "description": "总额度"
+                },
+                "data": {
+                    "type": "array",
+                    "description": "分页小区详情数据(小区纬度)",
+                    "items": {
+                        "$ref": "#/definitions/NeighborhoodDetailsResponse"
+                    }
+                },
+                "deviceCount": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "点位数目"
+                }
+            },
+            "title": "NbhdFilterSlotResponse"
+        },
+        "NeighborhoodDetailsResponse": {
+            "type": "object",
+            "properties": {
+                "addresCode": {
+                    "type": "string",
+                    "description": "小区所属行政区编码"
+                },
+                "address": {
+                    "type": "string",
+                    "description": "小区所属位置（省市区街道）"
+                },
+                "audienceNumber": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "受众人数"
+                },
+                "buildingNumber": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "楼栋数"
+                },
+                "checkInTime": {
+                    "type": "string",
+                    "description": "入住时间"
+                },
+                "daysNbhdShortageSlotList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DaysNbhdSlotShortageResponse"
+                    }
+                },
+                "daysNbhdSlotList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DaysNbhdSlotResponse"
+                    }
+                },
+                "deviceCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "有效点位数目"
+                },
+                "deviceGuids": {
+                    "type": "string",
+                    "description": "有效点位组件"
+                },
+                "guid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "主键"
+                },
+                "housesNumber": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "户数"
+                },
+                "housesPrice": {
+                    "type": "string",
+                    "description": "房屋均价"
+                },
+                "isHot": {
+                    "type": "string",
+                    "description": "是否热门小区  0代表热门  1非热门"
+                },
+                "lat": {
+                    "type": "string",
+                    "description": "小区纬度"
+                },
+                "location": {
+                    "type": "string",
+                    "description": "小区地理位置（路）"
+                },
+                "lon": {
+                    "type": "string",
+                    "description": "小区经度"
+                },
+                "maintenanceCharge": {
+                    "type": "string",
+                    "description": "物业费"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "小区名称"
+                },
+                "placeType": {
+                    "type": "string",
+                    "description": "房屋类型"
+                },
+                "shortageAmount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "缺货次数"
+                },
+                "slotAmount": {
+                    "type": "number",
+                    "description": "金额"
+                },
+                "tradeArea": {
+                    "type": "string",
+                    "description": "所属商圈"
+                },
+                "unitNumber": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "单元数"
+                },
+                "url": {
+                    "type": "string",
+                    "description": "小区图片地址"
+                }
+            },
+            "title": "NeighborhoodDetailsResponse"
+        },
+        "OrderGraphAllResponse": {
+            "type": "object",
+            "properties": {
+                "allCost": {
+                    "type": "number",
+                    "description": "广告总费用"
+                },
+                "orderGraphResponses": {
+                    "type": "array",
+                    "description": "具体清单",
+                    "items": {
+                        "$ref": "#/definitions/OrderGraphResponse"
+                    }
+                },
+                "playAllCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "播放次数"
+                },
+                "targetAllCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "目标总人群数目"
+                },
+                "totalAllCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "总数目"
+                },
+                "trend": {
+                    "type": "boolean",
+                    "description": "趋势,true 上升 false 下降"
+                }
+            },
+            "title": "OrderGraphAllResponse"
+        },
+        "OrderGraphRequest": {
+            "type": "object",
+            "properties": {
+                "orderCode": {
+                    "type": "string",
+                    "description": "订单编码"
+                },
+                "targetDate": {
+                    "type": "string",
+                    "description": "目标日期，不传入按日期图形，传入日期按照频次展示"
+                }
+            },
+            "title": "OrderGraphRequest"
+        },
+        "OrderGraphResponse": {
+            "type": "object",
+            "properties": {
+                "cost": {
+                    "type": "number",
+                    "description": "广告费用"
+                },
+                "peroidTime": {
+                    "type": "string",
+                    "description": "目标频次"
+                },
+                "playCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "播放次数"
+                },
+                "targetCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "目标人群数目"
+                },
+                "targetTime": {
+                    "type": "string",
+                    "description": "目标日期"
+                },
+                "totalCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "总数目"
+                }
+            },
+            "title": "OrderGraphResponse"
+        },
+        "OrderGraphTimeResponse": {
+            "type": "object",
+            "properties": {
+                "orderGraphResponses": {
+                    "type": "array",
+                    "description": "具体清单",
+                    "items": {
+                        "$ref": "#/definitions/OrderGraphResponse"
+                    }
+                }
+            },
+            "title": "OrderGraphTimeResponse"
+        },
+        "PageInfo": {
+            "type": "object",
+            "properties": {
+                "endRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "firstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "hasNextPage": {
+                    "type": "boolean"
+                },
+                "hasPreviousPage": {
+                    "type": "boolean"
+                },
+                "isFirstPage": {
+                    "type": "boolean"
+                },
+                "isLastPage": {
+                    "type": "boolean"
+                },
+                "lastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    }
+                },
+                "navigateFirstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigateLastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatePages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatepageNums": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "nextPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageNum": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "prePage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "size": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "startRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "total": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "PageInfo"
+        },
+        "PageInfo«ActivityRewardBo»": {
+            "type": "object",
+            "properties": {
+                "endRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "firstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "hasNextPage": {
+                    "type": "boolean"
+                },
+                "hasPreviousPage": {
+                    "type": "boolean"
+                },
+                "isFirstPage": {
+                    "type": "boolean"
+                },
+                "isLastPage": {
+                    "type": "boolean"
+                },
+                "lastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ActivityRewardBo"
+                    }
+                },
+                "navigateFirstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigateLastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatePages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatepageNums": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "nextPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageNum": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "prePage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "size": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "startRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "total": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "PageInfo«ActivityRewardBo»"
+        },
+        "PageInfo«消息分页»": {
+            "type": "object",
+            "properties": {
+                "endRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "firstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "hasNextPage": {
+                    "type": "boolean"
+                },
+                "hasPreviousPage": {
+                    "type": "boolean"
+                },
+                "isFirstPage": {
+                    "type": "boolean"
+                },
+                "isLastPage": {
+                    "type": "boolean"
+                },
+                "lastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/消息分页"
+                    }
+                },
+                "navigateFirstPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigateLastPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatePages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "navigatepageNums": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "nextPage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageNum": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pages": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "prePage": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "size": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "startRow": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "total": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "PageInfo«消息分页»"
+        },
+        "PaymentRequest": {
+            "type": "object",
+            "properties": {
+                "orderGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "订单主键"
+                },
+                "payPassword": {
+                    "type": "string",
+                    "description": "支付密码"
+                }
+            },
+            "title": "PaymentRequest"
+        },
+        "QueryMessageAPPReq": {
+            "type": "object",
+            "properties": {
+                "messageType": {
+                    "type": "string",
+                    "description": "消息类型"
+                },
+                "orderBy": {
+                    "type": "string",
+                    "description": "排序(DESC or ASC)"
+                },
+                "orderField": {
+                    "type": "string",
+                    "description": "需要排序的字段名"
+                },
+                "pageIndex": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "当前页码"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "每页显示条数"
+                }
+            },
+            "title": "QueryMessageAPPReq"
+        },
+        "SaveCustomerInfoRequest": {
+            "type": "object",
+            "properties": {
+                "advertiserType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "广告主类型"
+                },
+                "bankAccount": {
+                    "type": "string",
+                    "description": "开户银行账号"
+                },
+                "bankName": {
+                    "type": "string",
+                    "description": "开户银行名称"
+                },
+                "cityCode": {
+                    "type": "string",
+                    "description": "市编码"
+                },
+                "companyName": {
+                    "type": "string",
+                    "description": "企业名称"
+                },
+                "companyType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "企业认证类型"
+                },
+                "contactPhone": {
+                    "type": "string",
+                    "description": "联系电话"
+                },
+                "contacter": {
+                    "type": "string",
+                    "description": "联系人"
+                },
+                "customerGuid": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "客户主键"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "邮箱"
+                },
+                "industryCodes": {
+                    "type": "array",
+                    "description": "所属行业",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "licenceNo": {
+                    "type": "string",
+                    "description": "营业执照或身份证号码"
+                },
+                "logoUrl": {
+                    "type": "string",
+                    "description": "头像地址链接"
+                },
+                "provinceCode": {
+                    "type": "string",
+                    "description": "省编码"
+                },
+                "urlIdCard1": {
+                    "type": "string",
+                    "description": "身份证正面图片地址"
+                },
+                "urlIdCard2": {
+                    "type": "string",
+                    "description": "身份证反面图片地址"
+                },
+                "urlIdCard3": {
+                    "type": "string",
+                    "description": "手持身份证图片地址"
+                },
+                "urlLicenceNo": {
+                    "type": "string",
+                    "description": "营业执照图片地址"
+                }
+            },
+            "title": "SaveCustomerInfoRequest"
+        },
+        "SelectDeviceRequest": {
+            "type": "object",
+            "properties": {
+                "addressCodes": {
+                    "type": "array",
+                    "description": "需要过滤行政区域编码路径,支持多个选择 格式 -- 31100.23231.123.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ageCodes": {
+                    "type": "array",
+                    "description": "年龄,NULL代表不限",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "budget": {
+                    "type": "number",
+                    "description": "预算"
+                },
+                "communitys": {
+                    "type": "array",
+                    "description": "社区类型,NULL代表不限",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "contentTime": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "广告内容时长"
+                },
+                "lat": {
+                    "type": "string",
+                    "description": "纬度"
+                },
+                "lon": {
+                    "type": "string",
+                    "description": "经度"
+                },
+                "orderBy": {
+                    "type": "string",
+                    "description": "排序(DESC or ASC)"
+                },
+                "orderField": {
+                    "type": "string",
+                    "description": "需要排序的字段名"
+                },
+                "pageIndex": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "当前页码"
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "每页显示条数"
+                },
+                "round": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "周边半径"
+                },
+                "selectSlotRequest": {
+                    "description": "广告位相关查询参数",
+                    "$ref": "#/definitions/SelectSlotRequest"
+                },
+                "sexCode": {
+                    "type": "string",
+                    "description": "性别,NULL代表不限"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "搜索类型：1文字列表模式2地图模式"
+                }
+            },
+            "title": "SelectDeviceRequest"
+        },
+        "SelectSlotRequest": {
+            "type": "object",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "description": "结束时间"
+                },
+                "startDate": {
+                    "type": "string",
+                    "description": "开始时间"
+                },
+                "timeSlots": {
+                    "type": "array",
+                    "description": "选择频次",
+                    "items": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "title": "SelectSlotRequest"
+        },
+        "ShortageRequest": {
+            "type": "object",
+            "properties": {
+                "contentTime": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "广告内容时长"
+                },
+                "endDate": {
+                    "type": "string"
+                },
+                "frequencyTime": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "nbGuids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "startDate": {
+                    "type": "string"
+                }
+            },
+            "title": "ShortageRequest"
+        },
+        "消息分页": {
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "description": "行为"
+                },
+                "actionType": {
+                    "type": "string",
+                    "description": "行为类型"
+                },
+                "content": {
+                    "type": "string",
+                    "description": "内容"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "主键"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "图片"
+                },
+                "isRead": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "是否查看"
+                },
+                "sendTime": {
+                    "type": "string",
+                    "description": "发送时间"
+                },
+                "senderName": {
+                    "type": "string",
+                    "description": "发送人姓名"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "标题"
+                }
+            },
+            "title": "消息分页"
+        },
+        "消息类型是否全部查看": {
+            "type": "object",
+            "properties": {
+                "isRead": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "是否全部查看，0-否，1-是"
+                },
+                "messageContent": {
+                    "type": "string",
+                    "description": "副标题内容"
+                },
+                "messageType": {
+                    "type": "string",
+                    "description": "类型名称"
+                },
+                "messageTypeCode": {
+                    "type": "string",
+                    "description": "类型code"
+                }
+            },
+            "title": "消息类型是否全部查看"
+        }
+    }
+}
