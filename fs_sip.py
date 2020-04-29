@@ -3,7 +3,7 @@
 import socket,time
 import uuid
 import hashlib
-from websocket import create_connection
+import websocket
 
 
 svrIp,svrPort = "119.3.21.115",5066
@@ -106,8 +106,8 @@ User-Agent: Mozilla/5.0 """
     send_str= """REGISTER sip:119.3.21.115 SIP/2.0\r\nVia: SIP/2.0/WS df7jal23ls0d.invalid;branch=z9hG4bK3NWRm5ybdoXTivBx08DAhH21MzikNmZs;rport\r\nFrom: <sip:330101002@119.3.21.115>;tag=bult8AJAc8vgoJIIg1PX\r\nTo: <sip:330101002@119.3.21.115>\r\nContact: "undefined"<sip:330101002@df7jal23ls0d.invalid;rtcweb-breaker=no;transport=ws>;expires=60;click2call=no\r\nCall-ID: bafd5834-2e9e-3a5b-70bd-5be813b5de9a\r\nCSeq: 1 REGISTER\r\nContent-Length: 0\r\nMax-Forwards: 70\r\n"""
 
     print(send_str)
-    treg = SipRegObj(uid,passwd)
-    ws =create_connection("ws://119.3.21.115:50020")
+    treg = SipRegObj(uid, passwd)
+    ws = websocket.WebSocket.create_connection("ws://119.3.21.115:50020")
     ws.send(ws_str)
     ws.send(send_str)
     result = ws.recv()
